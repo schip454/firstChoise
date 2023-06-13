@@ -1069,13 +1069,18 @@
   &__title {
     margin-bottom: 40px;
     position: relative;
+    max-width: 468px;
+    width: 100%;
+    span {
+      color: $red;
+    }
     &::after {
       content: "";
       position: absolute;
       background-image: url(../images/slides/quotes.svg);
       width: 201px;
       height: 163px;
-      right: -250px;
+      right: -220px;
       top: 0;
       z-index: -1;
     }
@@ -1196,6 +1201,436 @@
   }
   &__item-img {
     max-width: none;
+  }
+}
+
+.breadcrumbs {
+  &__list {
+    margin: 45px 0 50px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: $border;
+  }
+  &__item {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  &__item-current {
+    color: $dark;
+  }
+}
+
+.care {
+  margin-bottom: 150px;
+  &__inner {
+    text-align: center;
+  }
+  &__suptitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 135%;
+    gap: 15px;
+    margin-bottom: 20px;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  &__title {
+    max-width: 1090px;
+    font-weight: 700;
+    font-size: 81px;
+    line-height: 110%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  &__title-img {
+    display: inline-block;
+    max-width: none;
+    padding: 0 20px;
+    &:last-child {
+      padding: 0;
+    }
+  }
+  &__box {
+    max-width: 560px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  &__btn {
+    max-width: 270px;
+    width: 100%;
+    height: 50px;
+    padding: 17px 0;
+    margin-bottom: 100px;
+  }
+}
+
+.services {
+  margin-bottom: 150px;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color: $red;
+  }
+  &__textbox {
+    max-width: 510px;
+    margin-bottom: 50px;
+  }
+  &__subtitle {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 135%;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 80px;
+  }
+  &__item {
+    max-width: 346px;
+    width: 100%;
+    height: 200px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__item-img {
+  }
+  &__item-title {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 135%;
+    margin-top: 12px;
+  }
+  &__item--healthcare {
+    max-width: 710px;
+    // height: 616px;
+    // grid-area: health;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  &__item--xray {
+    height: 636px;
+    max-width: 712px;
+    // width: 100%;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info {
+    max-width: 712px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 135%;
+  }
+  &__button {
+    width: 100%;
+    max-width: 480px;
+  }
+  &__btn {
+    width: 100%;
+  }
+}
+
+.insurance {
+  margin-bottom: 150px;
+  &__titlebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+  &__title {
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 135%;
+    max-width: 400px;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 47px;
+    margin-bottom: 75px;
+  }
+  &__list {
+  }
+  &__list-item {
+    text-transform: uppercase;
+    border-bottom: 1px solid $border;
+  }
+  &__list-link {
+    padding: 20px 0;
+  }
+  &__link {
+    font-size: 42px;
+    line-height: 110%;
+    color: $red;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  &__box {
+    background: $white;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    padding: 64px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 128px;
+    margin-bottom: 120px;
+  }
+  &__box-img {
+  }
+  &__box-text {
+    max-width: 1006px;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 110%;
+    span {
+      color: $red;
+    }
+  }
+
+  &__price {
+    text-align: center;
+  }
+  &__price-text {
+    color: $red;
+    font-weight: 900;
+    font-size: 300px;
+    line-height: 100%;
+    margin-bottom: 30px;
+    span {
+      display: block;
+      text-align: right;
+      font-size: 120px;
+      line-height: 100%;
+      color: $border;
+      margin-right: 300px;
+    }
+  }
+  &__price-info {
+    max-width: 424px;
+    margin-left: auto;
+    margin-right: 200px;
+    span {
+      color: $red;
+    }
+  }
+  &__item {
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 42px 72px 46px 43px;
+    margin-top: 50px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 24px;
+      top: 15px;
+      z-index: -1;
+      background: url(../images/icon/quesion.svg) no-repeat;
+      object-fit: cover;
+      height: 185px;
+      width: 128px;
+    }
+  }
+  &__item-text {
+    max-width: 305px;
+    span {
+      color: $red;
+    }
+  }
+}
+
+.faq {
+  margin-bottom: 150px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../images/icon/quesion.svg) no-repeat;
+      background-size: cover;
+      width: 450px;
+      height: 650px;
+      right: -300px;
+      top: 0;
+      z-index: -1;
+    }
+  }
+}
+
+.accordion {
+  width: 100%;
+  max-width: 970px;
+  &__item {
+    background-color: $background;
+    // margin-bottom: 20px;
+    border-bottom: 1px solid $dark;
+    // &:nth-child(even) {
+    //   border-bottom: none;
+    // }
+    &:first-child {
+      border-top: 1px solid $dark;
+    }
+  }
+  &__item-title {
+    padding: 35px 25px;
+    min-height: 3.5rem;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 135%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    &::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+      background-position: center;
+      background-size: 51% 3px, 3px 51%;
+      background-repeat: no-repeat;
+      height: 4px;
+      width: 50px;
+      height: 50px;
+      border-radius: 2px;
+      right: 23px;
+    }
+    &.active::after {
+      content: "";
+      position: absolute;
+      background: $dark;
+      width: 27px;
+      height: 3px;
+      border-radius: 2px;
+      right: 35px;
+    }
+  }
+  &__item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  &__item-content {
+    max-width: 826px;
+    padding: 15px 30px 30px;
+    // border-top: 1px solid;
+    // border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  }
+}
+
+.contact {
+  margin-bottom: 150px;
+  &__titlebox {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    max-width: 752px;
+  }
+  &__box {
+    max-width: 505px;
+    margin-bottom: 50px;
+  }
+  &__text {
+    margin-bottom: 22px;
+    span {
+      color: $red;
+    }
+  }
+  &__number {
+    font-size: 42px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    img {
+      height: 48px;
+      width: 48px;
+      object-fit: cover;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  &__form-box {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
+  &__form-input,
+  &__form-area {
+    width: 100%;
+    border: 1px solid $border;
+    border-radius: 35px;
+    padding: 17px 40px 14px;
+    &::placeholder {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 140%;
+      color: $dark;
+    }
+  }
+  &__form-area {
+    min-height: 270px;
+    resize: none;
+    width: 100%;
+  }
+  &__form-btn {
+    width: 100%;
   }
 }
 
