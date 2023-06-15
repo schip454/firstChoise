@@ -129,6 +129,23 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
   });
 });
 
+const checkboxItem = document.querySelector(".map__toggle-input");
+const checkboxText = document.querySelector(".map__toggle-text");
+const mapInner = document.querySelector(".map__inner");
+const mapCards = document.querySelector(".map__cards");
+
+checkboxItem.addEventListener("click", () => {
+  if (checkboxItem.checked) {
+    checkboxText.classList.add("checked");
+    mapInner.style.display = "none";
+    mapCards.style.display = "flex";
+  } else {
+    checkboxText.classList.remove("checked");
+    mapInner.style.display = "flex";
+    mapCards.style.display = "none";
+  }
+});
+
 const tickerItem = document.querySelectorAll(".brands__item");
 
 let pagination = document.querySelector(".brands__items");
