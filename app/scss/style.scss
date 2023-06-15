@@ -4,6 +4,8 @@
 @import "global";
 
 .header {
+  position: relative;
+  z-index: 100;
   &__inner {
     background: $white;
     border-radius: 0px 0px 35px 35px;
@@ -35,6 +37,12 @@
     border-top: 1px solid $border;
     padding: 20px 0;
   }
+  &__hamburger {
+    display: none;
+  }
+}
+.header__social-link--mob {
+  display: none;
 }
 
 .logo {
@@ -51,6 +59,11 @@
     display: flex;
     gap: 30px;
     align-items: center;
+    &:last-child {
+      .header__social-box {
+        display: none;
+      }
+    }
   }
   &__list-item {
     font-size: 15px;
@@ -137,6 +150,9 @@
   &__social {
     max-width: 235px;
     width: 100%;
+    .logo {
+      display: none;
+    }
   }
   &__social-text {
     margin-bottom: 10px;
@@ -173,6 +189,9 @@
     color: $border;
     font-size: 15px;
     line-height: 140%;
+  }
+  &__copy-brands {
+    display: none;
   }
 }
 
@@ -1328,17 +1347,28 @@
   &__items {
     position: absolute;
     bottom: 0;
-    left: -800px;
+    overflow: hidden;
+    left: 0px;
     display: flex;
     gap: 50px;
     align-items: center;
     overflow: hidden;
+    animation: 20s linear infinite;
+    animation-name: running;
   }
   &__item {
     cursor: pointer;
   }
   &__item-img {
     max-width: none;
+  }
+}
+@keyframes running {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3000px);
   }
 }
 

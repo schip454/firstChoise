@@ -1,3 +1,10 @@
+const burger = document.querySelector(".header__hamburger");
+const burgerContent = document.querySelector(".header__content");
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  burgerContent.classList.toggle("active");
+});
+
 const swiper = new Swiper(".top__slider", {
   // Optional parameters
   loop: true,

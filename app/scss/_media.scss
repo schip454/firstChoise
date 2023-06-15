@@ -1,74 +1,249 @@
-// @import "vars"
+@import "vars";
 
-// /*==========  Desktop First  ==========*/
+/*==========  Desktop First  ==========*/
 
-// /* Large Devices, Wide Screens */
-// @media only screen and (max-width : 1200px){
-  
-// }
-// 	/**/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .menu__list {
+    gap: 15px;
+  }
+  .footer__inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/**/
 
+@media only screen and (max-width: 1024px) {
+  .footer__box {
+    display: none;
+  }
+  .footer__copy-brands {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .footer__copy {
+    display: flex;
+    align-items: center;
 
-// /* Medium Devices, Desktops */
-// @media only screen and (max-width : 992px){
-  
-// }
-// 	/**/
+    justify-content: space-between;
+  }
+  .footer__inner {
+  }
+  .footer__brands {
+    display: none;
+  }
+  .footer__btn {
+    margin-bottom: 0;
+  }
+  .footer__top {
+    margin-bottom: 40px;
+  }
+  .footer__info {
+    max-width: 442px;
+  }
+  .footer__social {
+    .logo {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+  .header {
+    position: relative;
 
+    &__hamburger {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &.active {
+        .header__hamburger-line:first-child {
+          transform: rotate(45deg) translate(3px, 2px);
+        }
+        .header__hamburger-line:last-child {
+          transform: rotate(-45deg) translate(2px, -2px);
+        }
+      }
+    }
+    &__hamburger-box {
+      transition: 0.3s ease;
+      width: 35px;
+      height: 35px;
+      background-color: $light-grey;
+      // border-radius: 50%;
+      border-radius: 25px;
 
-// /* Small Devices, Tablets */
-// @media only screen and (max-width : 768px){
-  
-// }
-// 	/**/
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3px;
+    }
+    &__hamburger-line {
+      transition: 0.3s ease;
+      width: 25px;
+      height: 3px;
+      border-radius: 5px;
+      background-color: $dark;
+    }
+    &__hamburger-text {
+      font-size: 15px;
+      line-height: 140%;
+    }
+    &__social-box {
+      display: none;
+    }
+    &__social-link {
+      display: none;
+    }
+    &__social-link--mob {
+      display: block;
+      padding: 7px 31px;
+    }
+    &__top {
+      .logo {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+      }
+    }
+    &__inner {
+    }
+    &__content {
+      display: block;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: $white;
+      border-radius: 0px 0px 25px 25px;
+      border: none;
+      transition: 0.3s ease;
+      position: absolute;
+      width: 0;
+      height: 0;
+      z-index: -1;
+      top: 0;
+      transform-origin: top left;
+      transform: scale(0);
+      &.active {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        transform: scale(1);
+        height: auto;
+      }
+    }
+    .menu {
+      padding: 60px 0 30px;
+      // flex-direction: column;
+      justify-content: start;
+      gap: 360px;
+      width: 100%;
+      &__list {
+        flex-direction: column;
+        align-items: start;
+        &:first-child {
+          gap: 0;
+        }
+        &:last-child {
+          gap: 15px;
+          .menu__list-item {
+            font-size: 15px;
+            line-height: 100%;
+            margin-bottom: 0;
+          }
+          .header__social-box {
+            display: flex;
+            margin-top: 120px;
+            .header__social-link {
+              display: flex;
+            }
+          }
+        }
+      }
+      &__list-item {
+        font-size: 36px;
+        line-height: 100%;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      &__list-dropdown {
+        padding-right: 0;
+        // height: 36px;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      &__list-dropdown::after {
+        background-image: url(../images/icon/arrow-down--big.svg);
+        width: 25px;
+        height: 15px;
+        right: 15px;
+        top: 10px;
+      }
+      &__dropdown-content {
+        position: static;
+      }
+      &__dropdown-link {
+        font-size: 18px;
+        line-height: 100%;
+        &:hover {
+          background-color: $white;
+        }
+      }
+      &__dropdown-item {
+        display: block;
+        height: 36px;
+      }
+    }
+  }
+}
 
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+}
+/**/
 
-// /* Extra Small Devices, Phones */
-// @media only screen and (max-width : 480px){
-  
-// }
-// 	/**/
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+}
+/**/
 
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+}
+/**/
 
-// /* Custom, iPhone Retina */
-// @media only screen and (max-width : 320px){
-  
-// }
-// 	/**/
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+}
+/**/
 
+/*==========  Mobile First  ==========*/
 
-// /*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+}
+/**/
 
-// /* Custom, iPhone Retina */
-// @media only screen and (min-width : 320px){
-  
-// }
-// 	/**/
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+}
+/**/
 
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+}
+/**/
 
-// /* Extra Small Devices, Phones */
-// @media only screen and (min-width : 480px){
-  
-// }
-// 	/**/
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+}
+/**/
 
-
-// /* Small Devices, Tablets */
-// @media only screen and (min-width : 768px){
-  
-// }
-// 	/**/
-
-
-// /* Medium Devices, Desktops */
-// @media only screen and (min-width : 992px){
-  
-// }
-// 	/**/
-
-
-// /* Large Devices, Wide Screens */
-// @media only screen and (min-width : 1200px){
-  
-// }
-// 	/**/
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+}
+/**/
