@@ -106,11 +106,13 @@
     background-color: $white;
   }
   &__dropdown-link {
+  }
+  &__dropdown-link {
     padding: 10px 7px;
     transition: 0.3s ease;
     font-size: 15px;
   }
-  &__dropdown-link:hover,
+  &__dropdown-item:hover,
   &__dropdown-item:focus-within > a {
     background: rgba($dark, 0.1);
     cursor: pointer;
@@ -166,6 +168,10 @@
   &__info {
     max-width: 355px;
     width: 100%;
+    .footer__social-text,
+    .footer__social-box {
+      display: none;
+    }
   }
   &__info-text {
   }
@@ -322,9 +328,7 @@
   }
   &__item {
     display: flex;
-    gap: 80px;
     align-items: center;
-    max-width: 948px;
     width: 100%;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
@@ -336,21 +340,23 @@
     justify-content: center;
   }
   &__item-image {
+    flex-basis: 50%;
   }
   &__item-img {
   }
   &__item-box {
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
   }
   &__item-available {
     margin-bottom: 47px;
     font-size: 15px;
     line-height: 100%;
-    text-transform: uppercase;
     position: relative;
     padding-left: 25px;
     &::before {
@@ -493,7 +499,11 @@
   &__notes {
     min-height: 691px;
     padding: 30px;
+    border-radius: 30px;
     position: relative;
+  }
+  &__notes-img--mob {
+    display: none;
   }
   &__notes-title {
     position: absolute;

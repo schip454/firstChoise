@@ -9,38 +9,51 @@ const swiper = new Swiper(".top__slider", {
   // Optional parameters
   loop: true,
   effect: "fade",
-  pagination: {
-    el: ".top__slider-pagination",
-    type: "fraction",
-    // formatFractionCurrent: function (number) {
-    //   return "0" + number;
-    // },
-    // formatFractionTotal: function (number) {
-    //   return "0" + number;
-    // },
 
-    formatFractionCurrent: addZero,
-    formatFractionTotal: addZero,
-    renderFraction: function (currentClass, totalClass) {
-      return (
-        '<span class="' +
-        currentClass +
-        '"></span>' +
-        `
-        <svg width="34" height="1" viewBox="0 0 34 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <line y1="0.5" x2="34" y2="0.5" stroke="#202020"/>
-        </svg>
-        ` +
-        '<span class="' +
-        totalClass +
-        '"></span>'
-      );
-    },
-  },
   // Navigation arrows
   navigation: {
     nextEl: ".top__slider-next",
     prevEl: ".top__slider-prev",
+  },
+  breakpoints: {
+    320: {
+      pagination: {
+        el: ".top__slider-pagination",
+        type: "bullets",
+      },
+    },
+
+    1025: {
+      slidesPerView: 1,
+      pagination: {
+        el: ".top__slider-pagination",
+        type: "fraction",
+        // formatFractionCurrent: function (number) {
+        //   return "0" + number;
+        // },
+        // formatFractionTotal: function (number) {
+        //   return "0" + number;
+        // },
+
+        formatFractionCurrent: addZero,
+        formatFractionTotal: addZero,
+        renderFraction: function (currentClass, totalClass) {
+          return (
+            '<span class="' +
+            currentClass +
+            '"></span>' +
+            `
+            <svg width="34" height="1" viewBox="0 0 34 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <line y1="0.5" x2="34" y2="0.5" stroke="#202020"/>
+            </svg>
+            ` +
+            '<span class="' +
+            totalClass +
+            '"></span>'
+          );
+        },
+      },
+    },
   },
 });
 
@@ -69,6 +82,20 @@ const swiperThird = new Swiper(".offers__slider", {
     el: ".swiper-scrollbar",
     draggable: true,
   },
+  breakpoints: {
+    319: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    1025: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 const swiperFour = new Swiper(".reviews__slider", {
@@ -84,38 +111,42 @@ const swiperFour = new Swiper(".reviews__slider", {
       opacity: 0,
     },
   },
-  pagination: {
-    el: ".reviews__slider-pagination",
-    type: "fraction",
-    // formatFractionCurrent: function (number) {
-    //   return "0" + number;
-    // },
-    // formatFractionTotal: function (number) {
-    //   return "0" + number;
-    // },
 
-    formatFractionCurrent: addZero,
-    formatFractionTotal: addZero,
-    renderFraction: function (currentClass, totalClass) {
-      return (
-        '<span class="' +
-        currentClass +
-        '"></span>' +
-        `
-        <svg width="34" height="1" viewBox="0 0 34 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <line y1="0.5" x2="34" y2="0.5" stroke="#202020"/>
-        </svg>
-        ` +
-        '<span class="' +
-        totalClass +
-        '"></span>'
-      );
-    },
-  },
   // Navigation arrows
   navigation: {
     nextEl: ".reviews__slider-next",
     prevEl: ".reviews__slider-prev",
+  },
+  breakpoints: {
+    320: {
+      pagination: {
+        el: ".reviews__slider-pagination",
+        type: "bullets",
+      },
+    },
+    1025: {
+      pagination: {
+        el: ".reviews__slider-pagination",
+        type: "fraction",
+        formatFractionCurrent: addZero,
+        formatFractionTotal: addZero,
+        renderFraction: function (currentClass, totalClass) {
+          return (
+            '<span class="' +
+            currentClass +
+            '"></span>' +
+            `
+        <svg width="34" height="1" viewBox="0 0 34 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <line y1="0.5" x2="34" y2="0.5" stroke="#202020"/>
+        </svg>
+        ` +
+            '<span class="' +
+            totalClass +
+            '"></span>'
+          );
+        },
+      },
+    },
   },
 });
 
@@ -140,16 +171,19 @@ const checkboxItem = document.querySelector(".map__toggle-input");
 const checkboxText = document.querySelector(".map__toggle-text");
 const mapInner = document.querySelector(".map__inner");
 const mapCards = document.querySelector(".map__cards");
+const mapCardsWrapper = document.querySelector(".map__cards-wrapper");
 
 checkboxItem.addEventListener("click", () => {
   if (checkboxItem.checked) {
     checkboxText.classList.add("checked");
     mapInner.style.display = "none";
     mapCards.style.display = "flex";
+    mapCardsWrapper.style.display = "block";
   } else {
     checkboxText.classList.remove("checked");
     mapInner.style.display = "flex";
     mapCards.style.display = "none";
+    mapCardsWrapper.style.display = "none";
   }
 });
 
