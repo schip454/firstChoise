@@ -187,68 +187,68 @@ checkboxItem.addEventListener("click", () => {
   }
 });
 
-const tickerItem = document.querySelectorAll(".brands__item");
+// const tickerItem = document.querySelectorAll(".brands__item");
 
-let pagination = document.querySelector(".brands__items");
-let initialX = 0;
-let initialY = 0;
-let moveElem = false;
+// let pagination = document.querySelector(".brands__items");
+// let initialX = 0;
+// let initialY = 0;
+// let moveElem = false;
 
-let events = {
-  mouse: {
-    down: "mousedown",
-    move: "mousemove",
-    up: "mouseup",
-  },
-  touch: {
-    down: "touchstart",
-    move: "touchmove",
-    up: "touchend",
-  },
-};
+// let events = {
+//   mouse: {
+//     down: "mousedown",
+//     move: "mousemove",
+//     up: "mouseup",
+//   },
+//   touch: {
+//     down: "touchstart",
+//     move: "touchmove",
+//     up: "touchend",
+//   },
+// };
 
-let deviceType = "";
+// let deviceType = "";
 
-const isTouchDevice = () => {
-  try {
-    document.createEvent("TouchEvent");
-    deviceType = "touch";
-    return true;
-  } catch (err) {
-    deviceType = "mouse";
-    return false;
-  }
-};
-isTouchDevice();
+// const isTouchDevice = () => {
+//   try {
+//     document.createEvent("TouchEvent");
+//     deviceType = "touch";
+//     return true;
+//   } catch (err) {
+//     deviceType = "mouse";
+//     return false;
+//   }
+// };
+// isTouchDevice();
 
-pagination.addEventListener(events[deviceType].down, (e) => {
-  e.preventDefault();
-  initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-  initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
+// pagination.addEventListener(events[deviceType].down, (e) => {
+//   e.preventDefault();
+//   initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
+//   initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
 
-  moveElem = true;
-});
+//   moveElem = true;
+// });
 
-pagination.addEventListener(events[deviceType].move, (e) => {
-  if (moveElem) {
-    e.preventDefault();
-    let newX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-    let newY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
+// pagination.addEventListener(events[deviceType].move, (e) => {
+//   if (moveElem) {
+//     e.preventDefault();
+//     let newX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
+//     let newY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
 
-    pagination.style.left = pagination.offsetLeft - (initialX - newX) + "px";
+//     pagination.style.left = pagination.offsetLeft - (initialX - newX) + "px";
 
-    initialX = newX;
-    initialY = newY;
-  }
-});
+//     initialX = newX;
+//     initialY = newY;
+//   }
+// });
 
-pagination.addEventListener(events[deviceType].up, (e) => {
-  moveElem = false;
-});
+// pagination.addEventListener(events[deviceType].up, (e) => {
+//   moveElem = false;
+// });
 
-pagination.addEventListener("mouseleave", (e) => {
-  moveElem = false;
-});
-pagination.addEventListener(events[deviceType].up, (e) => {
-  moveElem = false;
-});
+// pagination.addEventListener("mouseleave", (e) => {
+//   moveElem = false;
+// });
+// pagination.addEventListener(events[deviceType].up, (e) => {
+//   moveElem = false;
+// });

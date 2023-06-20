@@ -6,6 +6,7 @@ body {
   line-height: 140%;
   color: $dark;
   background-color: $background;
+  letter-spacing: -0.02em;
 }
 
 .container {
@@ -24,7 +25,8 @@ body {
   line-height: 100%;
   transition: 0.3s ease;
   &:hover {
-    background-color: rgba($dark, 0.8);
+    background-color: $superLightGrey;
+    color: $dark;
   }
 }
 
