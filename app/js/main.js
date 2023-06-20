@@ -61,6 +61,22 @@ function addZero(num) {
   return num > 9 ? num : "0" + num;
 }
 
+const swiperInfo = new Swiper(".top__info-slider", {
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      opacity: 0,
+    },
+    next: {
+      opacity: 0,
+    },
+  },
+  loop: true,
+});
+
+swiperInfo.controller.control = swiper;
+swiper.controller.control = swiperInfo;
+
 const swiperSecond = new Swiper(".announcements__slider", {
   // Optional parameters
   loop: true,
