@@ -62,16 +62,8 @@ function addZero(num) {
 }
 
 const swiperInfo = new Swiper(".top__info-slider", {
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      opacity: 0,
-    },
-    next: {
-      opacity: 0,
-    },
-  },
   loop: true,
+  effect: "fade",
 });
 
 swiperInfo.controller.control = swiper;
@@ -83,6 +75,10 @@ const swiperSecond = new Swiper(".announcements__slider", {
   spaceBetween: 30,
   pagination: {
     el: ".announcements__slider-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 6000,
   },
 });
 
