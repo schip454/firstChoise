@@ -20,6 +20,7 @@ const swiper = new Swiper(".top__slider", {
       pagination: {
         el: ".top__slider-pagination",
         type: "bullets",
+        clickable: true,
       },
     },
 
@@ -64,6 +65,7 @@ function addZero(num) {
 const swiperInfo = new Swiper(".top__info-slider", {
   loop: true,
   effect: "fade",
+  slidesPerView: 1,
 });
 
 swiperInfo.controller.control = swiper;
@@ -73,6 +75,7 @@ const swiperSecond = new Swiper(".announcements__slider", {
   // Optional parameters
   loop: true,
   spaceBetween: 30,
+  speed: 500,
   pagination: {
     el: ".announcements__slider-pagination",
     clickable: true,
@@ -83,8 +86,6 @@ const swiperSecond = new Swiper(".announcements__slider", {
 });
 
 const swiperThird = new Swiper(".offers__slider", {
-  loop: true,
-  slidesPerView: 3,
   // Optional parameters
   navigation: {
     nextEl: ".offers__pagination-next",
