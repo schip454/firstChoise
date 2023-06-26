@@ -895,6 +895,7 @@
   &__pagination {
     display: flex;
     gap: 50px;
+    margin-right: 20px;
   }
   &__pagination-box {
     background-color: $white;
@@ -1117,6 +1118,9 @@
   }
   &__title {
     margin-bottom: 50px;
+    span {
+      color: $red;
+    }
   }
   &__text {
     font-size: 42px;
@@ -1469,6 +1473,9 @@
   }
   &__title {
     max-width: 720px;
+    span {
+      color: $red;
+    }
   }
   &__box {
     max-width: 460px;
