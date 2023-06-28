@@ -5,7 +5,7 @@
 
 .header {
   position: relative;
-  z-index: 100;
+  z-index: 101110;
   &__inner {
     background: $white;
     border-radius: 0px 0px 35px 35px;
@@ -944,7 +944,6 @@
   }
   &__items {
     display: flex;
-    gap: 20px;
     padding-bottom: 30px;
   }
   &__item {
@@ -952,7 +951,11 @@
     background-color: $white;
     border-radius: 30px;
     max-width: 440px;
+    margin-right: 20px;
     transition: 0.3s ease;
+    &:last-child {
+      margin-right: 0;
+    }
     &:hover {
       .offers__item-btn {
         color: $white;

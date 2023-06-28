@@ -5,6 +5,16 @@ burger.addEventListener("click", () => {
   burgerContent.classList.toggle("active");
 });
 
+// document.querySelector(".menu__list-dropdown").addEventListener("click", () => {
+//   if (
+//     document.querySelector(".menu__dropdown-content").style.maxHeight == "200px"
+//   ) {
+//     document.querySelector(".menu__dropdown-content").style.maxHeight = "0";
+//   } else {
+//     document.querySelector(".menu__dropdown-content").style.maxHeight = "200px";
+//   }
+// });
+
 const swiper = new Swiper(".top__slider", {
   // Optional parameters
   loop: true,
@@ -96,16 +106,20 @@ const swiperThird = new Swiper(".offers__slider", {
     draggable: true,
   },
   breakpoints: {
-    319: {
-      slidesPerView: 1,
-      spaceBetween: 0,
-    },
-
-    640: {
+    320: {
       slidesPerView: 1,
       spaceBetween: 15,
     },
-    1025: {
+    480: {
+      slidesPerView: 1.26,
+    },
+    641: {
+      slidesPerView: 1.4,
+    },
+    961: {
+      slidesPerView: 2.2,
+    },
+    1201: {
       slidesPerView: 3,
     },
   },
