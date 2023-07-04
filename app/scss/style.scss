@@ -1058,7 +1058,7 @@
     color: $white;
     max-width: 719px;
     width: 100%;
-    margin-bottom: 125px;
+    margin-bottom: 40px;
   }
   &__item-box {
   }
@@ -1133,10 +1133,13 @@
 }
 
 .want--withbg {
+  min-height: 850px;
+  background-position: bottom bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
   .want__inner {
-    min-height: 850px;
     display: block;
-    padding: 80px 80px 60px;
+    padding: 80px 0 60px;
   }
 }
 .want {
@@ -1155,9 +1158,9 @@
     }
   }
   &__text {
-    font-size: 15px;
+    font-size: 19px;
     line-height: 140%;
-    max-width: 412px;
+    max-width: 468px;
   }
   &__items {
     display: flex;
@@ -1684,7 +1687,8 @@
     width: 100%;
   }
   &__subtitle--cards {
-    max-width: 300px;
+    max-width: 270px;
+    margin-right: 200px;
   }
   &__cards {
     display: flex;
@@ -1826,6 +1830,7 @@
     max-width: 424px;
     margin-left: auto;
     margin-right: 200px;
+    text-align: left;
     span {
       color: $red;
     }
@@ -1952,10 +1957,12 @@
   }
   &__box {
     max-width: 505px;
+    width: 100%;
     margin-bottom: 50px;
   }
   &__text {
     margin-bottom: 22px;
+    max-width: 380px;
     span {
       color: $red;
     }
@@ -1989,12 +1996,14 @@
     border: 1px solid $border;
     border-radius: 35px;
     padding: 17px 40px 14px;
+    color: $border;
+
     &::placeholder {
       font-family: "Inter", sans-serif;
       font-weight: 500;
       font-size: 25px;
       line-height: 140%;
-      color: $dark;
+      color: $border;
     }
   }
   &__form-area {
@@ -2088,6 +2097,9 @@
         display: none;
       }
     }
+    span {
+      color: $red;
+    }
   }
   &__title--second::after {
     display: none;
@@ -2123,9 +2135,13 @@
   .video__titlebox {
     display: flex;
     justify-content: space-between;
+    align-items: end;
+    max-width: 1180px;
+    margin-bottom: 50px;
   }
   .video__title {
     max-width: 700px;
+    margin-bottom: 0;
     span {
       color: $red;
     }
@@ -2159,6 +2175,7 @@
     font-weight: 500;
     font-size: 25px;
     line-height: 135%;
+    margin-right: 162px;
   }
   &__items {
     display: flex;
@@ -2195,6 +2212,8 @@
       background-color: $border;
     }
   }
+  &__item--empty {
+  }
   &__item-wrapper {
   }
   &__item-img {
@@ -2205,7 +2224,6 @@
   margin-bottom: 150px;
   background-color: $blue;
   min-height: 480px;
-  border-radius: 35px;
   &__inner {
     color: $white;
     padding: 80px 30px;
@@ -2224,6 +2242,18 @@
     justify-content: space-between;
   }
   &__question {
+    position: relative;
+    padding-left: 35px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: $white;
+    }
   }
   &__number {
     font-weight: 500;
