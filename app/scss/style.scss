@@ -1658,6 +1658,9 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    img {
+      height: 200px;
+    }
   }
   &__item--xray {
     height: 636px;
@@ -1667,6 +1670,9 @@
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 6;
+    img {
+      height: 636px;
+    }
   }
   &__wrapper {
     display: flex;
@@ -1685,6 +1691,9 @@
   }
   &__btn {
     width: 100%;
+  }
+  &__more-btn {
+    display: none;
   }
   &__subtitle--cards {
     max-width: 270px;
@@ -1706,17 +1715,22 @@
     border-radius: 35px;
     position: relative;
     padding: 25px 40px;
+    z-index: 2;
+    flex-basis: 32%;
   }
   &__card-text {
     font-weight: 500;
     font-size: 25px;
     line-height: 135%;
     max-width: 279px;
+    position: relative;
+    z-index: 2;
   }
   &__card-img {
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: 1;
   }
   &__drug {
     display: flex;
@@ -1767,6 +1781,15 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 47px;
     margin-bottom: 75px;
+  }
+  &__inner--mob {
+    display: none;
+  }
+  &__mobile-wrapper {
+    display: none;
+  }
+  &__mobile-slider {
+    display: none;
   }
   &__list {
   }
@@ -1992,6 +2015,7 @@
   }
   &__form-input,
   &__form-area {
+    outline-color: $dark;
     width: 100%;
     border: 1px solid $border;
     border-radius: 35px;
@@ -2146,10 +2170,17 @@
       color: $red;
     }
   }
+  .video__text-wrapper {
+    display: flex;
+    gap: 22px;
+  }
   .video__wrapper {
     display: flex;
     align-items: flex-start;
     gap: 22px;
+  }
+  .video__time--mob {
+    display: none;
   }
   .video__item {
     max-width: 468px;
@@ -2260,9 +2291,13 @@
     font-size: 81px;
     line-height: 120%;
   }
+  &__number--mob {
+    display: none;
+  }
   &__titlebox {
     max-width: 675px;
   }
+
   &__title {
     font-weight: 500;
     font-size: 81px;

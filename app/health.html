@@ -242,17 +242,19 @@
               </p>
             </div>
             <div class="want__cards">
-              <div class="want__card">
-                <img
-                  src="images/slides/want-1.svg"
-                  alt="Icon Certified clinic"
-                  class="want__item-img" />
-                <div class="want__card-box">
-                  <h5 class="want__item-title">Certified clinic</h5>
-                  <p class="want__card-text">
-                    We received Certified Urgent Care Designation from the
-                    Urgent Care Assosication of America
-                  </p>
+              <div class="want__card-wrapper">
+                <div class="want__card">
+                  <img
+                    src="images/slides/want-1.svg"
+                    alt="Icon Certified clinic"
+                    class="want__item-img" />
+                  <div class="want__card-box">
+                    <h5 class="want__item-title">Certified clinic</h5>
+                    <p class="want__card-text">
+                      We received Certified Urgent Care Designation from the
+                      Urgent Care Assosication of America
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="want__card">
@@ -331,35 +333,45 @@
                 src="images/slides/services-4.png"
                 alt="Urina sample" />
             </div>
-            <div class="services__card">
+            <div
+              class="services__card animate__animated animate__fadeIn"
+              data-card="hidden">
               <p class="services__card-text">Workplace Injury and Illness</p>
               <img
                 class="services__card-img"
                 src="images/slides/services-5.png"
                 alt="finger splint" />
             </div>
-            <div class="services__card">
+            <div
+              class="services__card animate__animated animate__fadeIn"
+              data-card="hidden">
               <p class="services__card-text">Breath Alcohol Test</p>
               <img
                 class="services__card-img"
                 src="images/slides/services-6.png"
                 alt="Alkoholtester" />
             </div>
-            <div class="services__card">
+            <div
+              class="services__card animate__animated animate__fadeIn"
+              data-card="hidden">
               <p class="services__card-text">Lab tests, X-rays and EKG</p>
               <img
                 class="services__card-img"
                 src="images/slides/services-7.png"
                 alt="Microscope" />
             </div>
-            <div class="services__card">
+            <div
+              class="services__card animate__animated animate__fadeIn"
+              data-card="hidden">
               <p class="services__card-text">TB testing</p>
               <img
                 class="services__card-img"
                 src="images/slides/services-8.png"
                 alt="petri dish" />
             </div>
-            <div class="services__card">
+            <div
+              class="services__card services__card--nogap animate__animated animate__fadeIn"
+              data-card="hidden">
               <p class="services__card-text">
                 Vaccinations: Tetanus, Flu, Hepatitis B, MMR and TB
               </p>
@@ -368,21 +380,27 @@
                 src="images/slides/services-9.png"
                 alt="covid vaccine" />
             </div>
-            <div class="services__card">
+            <div
+              class="services__card services__card--xray animate__animated animate__fadeIn"
+              data-card="hidden">
               <p class="services__card-text">Audiograms & Vision Testing</p>
               <img
                 class="services__card-img"
                 src="images/slides/services-10.png"
                 alt="Dental X-ray" />
             </div>
-            <div class="services__card">
+            <div
+              class="services__card services__card--nogap animate__animated animate__fadeIn"
+              data-card="hidden">
               <p class="services__card-text">Surveillance Physicals</p>
               <img
                 class="services__card-img"
                 src="images/slides/services-11.png"
                 alt="Doctor" />
             </div>
-            <div class="services__card">
+            <div
+              class="services__card services__card--crp animate__animated animate__fadeIn"
+              data-card="hidden">
               <p class="services__card-text">
                 Training: OSHA compliance, DOT, CPR, First Aid, AED and employee
                 health and safety training solution
@@ -393,6 +411,12 @@
                 alt="CPR Trainer" />
             </div>
           </div>
+
+          <button
+            class="services__more-btn services__cards-morebtn transparent-btn">
+            Show more
+          </button>
+
           <div class="services__drug">
             <img
               class="services__drug-img"
@@ -411,7 +435,7 @@
         </div>
       </section>
 
-      <section class="offers">
+      <section class="offers offers--solo">
         <div class="container">
           <div class="offers__box">
             <h2 class="offers__title section-title">Special offers</h2>
@@ -438,7 +462,7 @@
       <section class="video">
         <div class="container">
           <div class="video__inner">
-            <div class="video__box">
+            <div class="video__box video__box--second">
               <div class="video__titlebox">
                 <h2 class="video__title video__title--second section-title">
                   <span>1st Choice</span> is a part of Occmed connect Network
@@ -458,7 +482,7 @@
               </p>
               <p class="video__text">Watch the video to learn more</p>
             </div>
-            <div class="video__item">
+            <div class="video__item video__item--second">
               <iframe
                 class="video__item-iframe"
                 src="https://www.youtube.com/embed/cNPAxFzV-Ww"
@@ -572,6 +596,10 @@
                 </p>
               </div>
             </div>
+            <a href="tel:7344475243" class="talk__number talk__number--mob"
+              >734-447-5243</a
+            >
+
             <a href="mail:info@firstchoiceucc.com" class="talk__mail"
               >info@firstchoiceucc.com</a
             >

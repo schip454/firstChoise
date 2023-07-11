@@ -176,6 +176,24 @@ const swiperFour = new Swiper(".reviews__slider", {
     },
   },
 });
+const swiperFive = new Swiper(".insurance__slider", {
+  // Optional parameters
+  loop: true,
+  spaceBetween: 30,
+  pagination: {
+    el: ".insurance__slider-pagination",
+    type: "bullets",
+  },
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      opacity: 0,
+    },
+    next: {
+      opacity: 0,
+    },
+  },
+});
 
 // accordion
 const accordionItemHeaders = document.querySelectorAll(
@@ -191,6 +209,38 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
     } else {
       accordionItemBody.style.maxHeight = 0;
     }
+  });
+});
+
+const videoItem = document.querySelector(".video__item");
+const videoItemSecond = document.querySelector(".video__item--second");
+const videoContainer = document.querySelector(".video__box");
+const videoContainerSecond = document.querySelector(".video__box--second");
+if (window.innerWidth <= 960) {
+  videoContainer.appendChild(videoItem);
+  videoContainerSecond.appendChild(videoItemSecond);
+}
+
+// Показывает контент по клику на кнопку Show more
+const buttons = document.querySelectorAll(".services__more-btn");
+const hiddenCards = document.querySelectorAll("[data-card]");
+
+buttons.forEach((value) => {
+  value.addEventListener("click", (e) => {
+    e.preventDefault();
+    hiddenCards.forEach((item) => {
+      if (item.dataset.card === "hidden") {
+        // item.classList.remove("bounceOut");
+        item.classList.add("fadeInUp");
+
+        // setTimeout(() => {
+        item.style.display = "flex";
+        // }, 200);
+        // value.textContent = "Скрыть";
+        value.remove();
+        item.dataset.card = "open";
+      }
+    });
   });
 });
 

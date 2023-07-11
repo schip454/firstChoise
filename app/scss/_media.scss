@@ -6,6 +6,21 @@
   .announcements__cards {
     flex-wrap: nowrap;
   }
+  .health__title {
+    font-size: 74px;
+  }
+  .offers__card {
+    gap: 80px;
+  }
+  .partners__item {
+    max-width: 345px;
+  }
+  .talk__number {
+    font-size: 52px;
+  }
+  .talk__inner {
+    padding: 80px 0;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
@@ -42,6 +57,48 @@
     background-position: center;
     background-size: cover;
     border-radius: 35px;
+  }
+  .health__inner {
+    flex-direction: column;
+  }
+  .health__box {
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .health__btn {
+    height: auto;
+    max-width: 307px;
+    height: 60px;
+  }
+  .health__title {
+    max-width: none;
+  }
+  .health__inner {
+    gap: 30px;
+  }
+  .offers__card {
+    gap: 60px;
+  }
+  .offers__card-title {
+    font-size: 60px;
+  }
+  .partners__item:nth-child(1),
+  .partners__item:nth-child(2),
+  .partners__item:nth-child(9),
+  .partners__item:nth-child(16),
+  .partners__item:nth-child(5) {
+    display: none;
+  }
+  .partners__items {
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .about__inner {
+    gap: 0;
+    justify-content: space-between;
   }
 }
 
@@ -127,9 +184,7 @@
     gap: 50px 60px;
     max-width: 600px;
   }
-  .want__title {
-    max-width: 305px;
-  }
+
   .experience__text {
     padding-top: 0;
     max-width: 520px;
@@ -211,6 +266,433 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .services__inner {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .services__item--healthcare {
+    max-width: none;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    img {
+      width: 100%;
+    }
+  }
+  .services__item--xray {
+    height: 200px;
+    max-width: none;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    img {
+      width: 100%;
+      height: 200px;
+    }
+  }
+  .services__item {
+    max-width: none;
+  }
+  .services__box {
+    max-width: 1005px;
+  }
+  .services__textbox {
+    max-width: 633px;
+  }
+  .services__item-title {
+    font-size: 19px;
+  }
+  .services__info {
+    max-width: 510px;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.19px;
+  }
+  .services__wrapper {
+    align-items: end;
+  }
+  .services__button {
+    max-width: 307px;
+  }
+  .insurance__titlebox {
+    max-width: 650px;
+  }
+  .insurance__text {
+    max-width: 307px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: -0.6px;
+  }
+  .insurance__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.8px;
+  }
+  .insurance__list-item {
+    font-size: 15px;
+  }
+  .insurance__link {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.19px;
+    width: 100%;
+    margin-top: 115px;
+  }
+  .insurance__box {
+    max-width: 620px;
+    margin: 0 auto 70px;
+    height: 200px;
+    padding: 46px 58px;
+    gap: 38px;
+  }
+  .insurance__box-text {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.19px;
+  }
+  .insurance__box-img {
+    width: 100px;
+    height: 144px;
+  }
+  .insurance__price {
+    position: relative;
+  }
+  .insurance__price-text {
+    display: flex;
+    margin-bottom: 0;
+  }
+  .insurance__price-info {
+    position: absolute;
+    bottom: 43px;
+    left: 630px;
+    max-width: 284px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .insurance__price-text span {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  .accordion {
+    max-width: 633px;
+  }
+  .contact__box,
+  .contact__text {
+    max-width: 540px;
+  }
+  .contact__box {
+    margin-bottom: 0;
+  }
+  .contact__text {
+    margin-bottom: 25px;
+  }
+  .contact__number {
+    font-size: 32px;
+  }
+  .contact__number img {
+    width: 40px;
+    height: 40px;
+  }
+  .contact__titlebox {
+    justify-content: start;
+    gap: 120px;
+    margin-bottom: 40px;
+  }
+  .health__title {
+    font-size: 45px;
+    line-height: 110%;
+    letter-spacing: -0.9px;
+  }
+  .health__inner {
+    align-items: start;
+    gap: 23px;
+    margin-bottom: 28px;
+  }
+  .health__text {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.19px;
+  }
+
+  .video__title::after {
+    display: none;
+  }
+  .video__title {
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: -0.8px;
+    max-width: 307px;
+    margin-bottom: 27px;
+  }
+  .video__time {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .video__box {
+    margin-right: 20px;
+  }
+  .want__title {
+    font-size: 40px;
+    letter-spacing: -0.8px;
+    max-width: 307px;
+    margin-bottom: 30px;
+  }
+  .want__text {
+    max-width: 307px;
+  }
+  .want--withbg {
+    min-height: 600px;
+    background-position: bottom;
+  }
+  .want--withbg .want__inner {
+    padding: 60px 0;
+  }
+  .want__cards {
+    margin-top: 50px;
+  }
+  .want__card {
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 0;
+    justify-content: center;
+    text-align: center;
+  }
+  .want__item-img {
+    width: 50px;
+    height: 50px;
+  }
+  .want__card-text {
+    max-width: 257px;
+  }
+  .want__cards {
+    justify-content: center;
+  }
+
+  .services__card {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px 30px 0;
+    gap: 18px;
+    height: 253px;
+  }
+  .services__card-text {
+    font-size: 19px;
+    line-height: 140%;
+    letter-spacing: -0.19px;
+  }
+  .services__card-img {
+    position: static;
+  }
+  .services__card-text {
+    max-width: none;
+  }
+  .services__box {
+    max-width: none;
+  }
+  .services__textbox {
+    max-width: 400px;
+  }
+  .services__subtitle--cards {
+    max-width: 400px;
+    margin-right: 0;
+  }
+  .services__card--crp,
+  .services__card--xray {
+    align-items: start;
+    justify-content: start;
+    .services__card-img {
+      border-radius: 25px;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  .services__card--crp {
+    .services__card-text {
+      max-width: 182px;
+    }
+  }
+  .services__card--xray {
+    .services__card-text {
+      max-width: 130px;
+    }
+  }
+  .services__card--nogap {
+    gap: 0;
+  }
+  .services__drug-img {
+    min-height: 370px;
+    min-width: 460px;
+    object-fit: cover;
+    border-radius: 20px;
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .services__drug-box {
+    width: 100%;
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .services__drug-title {
+    max-width: 370px;
+    margin: 0 auto 12px;
+  }
+  .services__drug-text {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .offers__card-img {
+    min-width: 470px;
+    width: 100%;
+    height: 240px;
+    border-radius: 30px;
+    flex-basis: 50%;
+  }
+  .offers__box {
+    margin-bottom: 25px;
+  }
+  .offers__card {
+    gap: 20px;
+  }
+  .offers__card-wrapper {
+    flex-basis: 50%;
+  }
+  .offers {
+    padding: 60px 0;
+  }
+  .offers__card-btn {
+    max-width: none;
+  }
+  .offers__card-title {
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -1.12px;
+    margin-bottom: 25px;
+  }
+  .partners__text {
+    max-width: 322px;
+    font-size: 19px;
+    line-height: 140%;
+    letter-spacing: -0.19px;
+    margin-right: 0;
+  }
+  .partners__titlebox {
+    max-width: 1018px;
+  }
+  .partners__item {
+    max-width: 334px;
+  }
+  .partners__item::before {
+    width: 297px;
+  }
+  .partners__item:nth-child(10)::after,
+  .partners__item:nth-child(6)::after,
+  .partners__item:nth-child(13)::after {
+    display: none;
+  }
+  .talk__inner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 0;
+  }
+  .talk__wrapper {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+  }
+  .talk__question {
+    order: 0;
+    padding-left: 0;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: -0.75px;
+  }
+  .talk__title {
+    font-size: 61px;
+    line-height: 120%;
+    letter-spacing: -1.22px;
+    margin-bottom: 15px;
+  }
+  .talk__question::before {
+    display: none;
+  }
+  .talk__titlebox {
+    order: 1;
+  }
+  .talk__number {
+    display: none;
+  }
+  .talk__number--mob {
+    display: block;
+    font-size: 41px;
+    line-height: 120%;
+    letter-spacing: -0.82px;
+    margin-bottom: 10px;
+  }
+  .talk__text {
+    margin-bottom: 30px;
+  }
+  .talk__mail {
+    font-size: 41px;
+    line-height: 120%;
+    letter-spacing: -0.82px;
+  }
+
+  .about__title {
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: -0.8px;
+    margin-bottom: 28px;
+  }
+  .about__subtitle {
+    font-size: 30px;
+    line-height: 110%;
+    max-width: 480px;
+    margin-bottom: 15px;
+  }
+  .about__card-title {
+    font-size: 19px;
+    line-height: 110%;
+    margin-bottom: 10px;
+  }
+  .about__card-info {
+    font-size: 15px;
+    letter-spacing: -0.15px;
+  }
+  .about__card-img {
+    max-width: 250px;
+    height: 320px;
+  }
+  .about {
+    min-height: auto;
+  }
+  .video--about {
+    .video__title {
+      max-width: 540px;
+    }
+    .video__text {
+      font-size: 15px;
+      line-height: 140%;
+    }
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -246,10 +728,75 @@
     margin-top: 14px;
     margin-bottom: 13px;
   }
+  .care {
+    margin-bottom: 100px;
+  }
+  .care__suptitle {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .care__title {
+    font-size: 45px;
+    letter-spacing: -0.9px;
+    max-width: 590px;
+    margin-bottom: 30px;
+  }
+  .care__title-img {
+    height: 50px;
+    width: 120px;
+    padding: 0 10px;
+    &:last-child {
+      width: 50px;
+    }
+  }
+  .care__btn {
+    margin-bottom: 0;
+  }
+  .faq__title::after {
+    width: 307px;
+    height: 443px;
+    right: -180px;
+  }
+  .accordion__item-title {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: -0.6px;
+  }
+  .accordion__item-title::after {
+    right: 0;
+  }
+  .accordion__item-title.active::after {
+    right: 9px;
+  }
+  .accordion__item-content {
+    max-width: 510px;
+    padding: 0px 0 20px;
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .video--about {
+    .video__item {
+      max-width: 305px;
+      height: 178px;
+    }
+    .video__item-iframe {
+      width: 305px;
+      height: 178px;
+    }
+  }
 }
 /**/
 
 @media only screen and (max-width: 1024px) {
+  .breadcrumbs {
+    display: none;
+  }
+  .care,
+  .health {
+    margin-top: 70px;
+  }
   .footer__box {
     display: none;
   }
@@ -460,7 +1007,17 @@
   .experience,
   .tests,
   .visit,
-  .reviews {
+  .reviews,
+  .services,
+  .insurance,
+  .faq,
+  .contact,
+  .health,
+  .video,
+  .want,
+  .partners,
+  .talk,
+  .about {
     margin-bottom: 100px;
   }
 
@@ -492,7 +1049,8 @@
     display: none;
   }
   .reviews__slider-pagination .swiper-pagination-bullet,
-  .top__slider-pagination .swiper-pagination-bullet {
+  .top__slider-pagination .swiper-pagination-bullet,
+  .insurance__slider-pagination .swiper-pagination-bullet {
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -502,6 +1060,7 @@
     position: relative;
   }
   .reviews__slider-pagination .swiper-pagination-bullet-active::after,
+  .insurance__slider-pagination .swiper-pagination-bullet-active::after,
   .top__slider-pagination .swiper-pagination-bullet-active::after {
     content: "";
     position: absolute;
@@ -763,6 +1322,7 @@
   }
   .reviews__slider-pagination .swiper-pagination-bullet,
   .announcements__slider-pagination .swiper-pagination-bullet,
+  .insurance__slider-pagination .swiper-pagination-bullet,
   .top__slider-pagination .swiper-pagination-bullet {
     width: 16px;
     height: 16px;
@@ -770,11 +1330,13 @@
   }
   .reviews__slider-pagination .swiper-pagination-bullet-active::after,
   .announcements__slider-pagination .swiper-pagination-bullet-active::after,
+  .insurance__slider-pagination .swiper-pagination-bullet-active::after,
   .top__slider-pagination .swiper-pagination-bullet-active::after {
     width: 10px;
     height: 10px;
   }
   .reviews__slider-pagination,
+  .insurance__slider-pagination,
   .announcements__slider-pagination {
     display: flex;
     align-items: center;
@@ -789,6 +1351,34 @@
   }
   .footer__info-text {
     font-size: 15px;
+  }
+  .want__title {
+    max-width: 305px;
+    margin-bottom: 20px;
+  }
+  .map__title {
+    max-width: 385px;
+  }
+  .want__items {
+    gap: 30px 80px;
+  }
+  .video__item-iframe {
+    width: 646px;
+  }
+  .offers__card-title {
+    font-size: 55px;
+  }
+  .partners__item {
+    max-width: 300px;
+  }
+  .partners__item::before {
+    width: 263px;
+  }
+  .partners__titlebox {
+    max-width: 920px;
+  }
+  .about__inner {
+    margin-top: 120px;
   }
 }
 
@@ -1030,6 +1620,12 @@
   .want__items {
     justify-content: start;
   }
+  .want__wrapper {
+    max-width: 520px;
+  }
+  .compitences__wrapper {
+    max-width: 630px;
+  }
   .experience__text {
     font-size: 25px;
     line-height: 120%;
@@ -1149,8 +1745,359 @@
   .announcements__item {
     width: 96%;
   }
+  .insurance__price-text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    span {
+      margin-left: 0;
+    }
+  }
+  .insurance__price-info {
+    position: static;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .care__suptitle {
+    font-size: 20px;
+  }
+  .care__title {
+    line-height: 110%;
+  }
+  .services__inner {
+    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .services__item {
+    max-width: 278px;
+    border-radius: 30px;
+  }
+  .services__more-btn {
+    display: block;
+    margin: 0 auto;
+    max-width: 140px;
+    width: 100%;
+    height: 50px;
+  }
+  .services__wrapper {
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .services__btn {
+    margin-top: 20px;
+  }
+  .services__info {
+    max-width: 546px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .services__item--xray,
+  .services__item--healthcare {
+    display: none;
+  }
+  [data-card] {
+    display: none;
+  }
+  .services__textbox {
+    max-width: 441px;
+  }
+  .services__subtitle {
+    font-size: 20px;
+    line-height: 135%;
+    letter-spacing: -0.6px;
+  }
+  .insurance__inner {
+    display: none;
+  }
+  .insurance__mobile-wrapper {
+    display: block;
+  }
+  .insurance__inner--mob {
+    display: flex;
+    gap: 20px;
+    .insurance__list {
+      flex-basis: 50%;
+    }
+  }
+  .insurance__link {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .insurance__titlebox {
+    max-width: none;
+    justify-content: start;
+    margin-bottom: 40px;
+  }
+  .insurance__text {
+    flex-basis: 50%;
+  }
+  .insurance__title {
+    flex-basis: 50%;
+  }
+
+  .faq__title::after {
+    width: 141px;
+    height: 204px;
+    right: -50px;
+  }
+  .video__box {
+    margin-right: 0;
+    max-width: none;
+    width: 100%;
+  }
+  .video__title {
+    max-width: none;
+  }
+  .video__item {
+    order: 3;
+    margin-bottom: 20px;
+    max-width: none;
+    height: 470px;
+  }
+  .video__item-iframe {
+    width: 100%;
+    height: 470px;
+  }
+  .video__text {
+    order: 4;
+    max-width: none;
+  }
+  .video__time {
+    margin-bottom: 17px;
+  }
+  .want--withbg {
+    min-height: 750px;
+    background-position: -350px;
+    .want__wrapper {
+      display: block;
+    }
+    .want__title {
+      margin-bottom: 25px;
+    }
+    // .want__cards {
+    //   display: grid;
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
+    .want__cards {
+      flex-wrap: wrap;
+      justify-content: start;
+    }
+    .want__card-wrapper {
+      width: 100%;
+    }
+    .want__card {
+      max-width: 298px;
+      width: 100%;
+      // &:first-child {
+      //   grid-column-start: 1;
+      //   grid-column-end: 3;
+      // }
+    }
+  }
+  .offers__card {
+    flex-direction: column;
+    height: 297px;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .offers__card-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.44px;
+  }
+  .offers--solo {
+    .offers__box {
+      justify-content: center;
+    }
+  }
+
+  .offers__card-wrapper {
+    flex-basis: auto;
+  }
+  .offers__card-btn,
+  .offers__item-box {
+    max-width: 550px;
+  }
+  .offers__cards {
+    margin-bottom: 0;
+  }
+  .offers {
+    min-height: 560px;
+  }
+  .video__text {
+    margin-bottom: 20px;
+  }
+  .video__title--second {
+    max-width: 400px;
+  }
+  .partners__titlebox {
+    margin-bottom: 25px;
+  }
+  .video--about {
+    .video__time {
+      display: none;
+    }
+    .video__time--mob {
+      display: flex;
+    }
+    .video__wrapper {
+      flex-direction: column;
+      gap: 0;
+    }
+    .video__item {
+      max-width: none;
+      width: 100%;
+      height: auto;
+    }
+    .video__item-iframe {
+      width: 100%;
+      height: 435px;
+    }
+    .video__title {
+      max-width: 553px;
+    }
+    .video__titlebox {
+      margin-bottom: 25px;
+    }
+    .video__text {
+      margin-bottom: 0;
+    }
+    .video__text-wrapper {
+      margin-bottom: 40px;
+    }
+  }
 }
 /**/
+
+@media only screen and (max-width: 920px) {
+  .health__suptitle {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 20px;
+    line-height: 135%;
+    letter-spacing: -0.6px;
+  }
+  .health__title {
+    font-size: 40px;
+    max-width: 620px;
+    text-align: center;
+  }
+  .health__inner {
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .health__box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 420px;
+    gap: 30px;
+  }
+  .health__btn {
+    max-width: none;
+  }
+  .health__text {
+    margin-bottom: 0;
+  }
+  .health__image-img {
+    min-height: 680px;
+    object-fit: cover;
+  }
+  .services__card {
+    flex-basis: 48%;
+    max-width: none;
+    min-width: 298px;
+  }
+  .services__drug {
+    align-items: start;
+    gap: 20px;
+  }
+
+  .services__drug-img {
+    min-height: 252px;
+    max-width: 460px;
+    min-width: 290px;
+    width: 100%;
+  }
+
+  .services__drug-box {
+    margin-top: 10px;
+  }
+  .services__drug-title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 110%;
+    // max-width: 300px;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+  .services__drug-text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 140%;
+    // max-width: 235px;
+  }
+  .partners__item {
+    max-width: 280px;
+  }
+  .partners__item::before {
+    width: 243px;
+  }
+  .partners__titlebox {
+    max-width: 885px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .services__box {
+    justify-content: start;
+    gap: 20px;
+  }
+  .services__item {
+    max-width: 300px;
+  }
+  .services__more-btn {
+    margin-right: auto;
+    margin-left: 245px;
+  }
+  .services__wrapper {
+    max-width: 640px;
+  }
+  .contact__titlebox {
+    justify-content: space-between;
+  }
+  .contact__box,
+  .contact__text {
+    max-width: 280px;
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .contact__form-box {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  // .partners__item {
+  //   max-width: 160px;
+  //   height: 100px;
+  // }
+  .partners__item {
+    max-width: 260px;
+  }
+  .partners__item::before {
+    width: 223px;
+  }
+}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 840px) {
@@ -1161,7 +2108,88 @@
   .announcements__card--mini {
     max-width: 288px;
   }
+  .partners__item {
+    max-width: 240px;
+  }
+  .partners__item::before {
+    width: 203px;
+  }
+  .talk__text {
+    font-size: 20px;
+    line-height: 135%;
+    letter-spacing: -0.6px;
+    max-width: 536px;
+    margin-bottom: 40px;
+  }
+  .about__inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__title {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .about__box {
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .about__subtitle {
+    font-size: 25px;
+    line-height: 110%;
+    max-width: 293px;
+  }
+  .about__text {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .about__card-title {
+    font-weight: 400;
+  }
+  .about__inner {
+    margin-top: 70px;
+  }
 }
+
+@media only screen and (max-width: 800px) {
+  .accordion {
+    max-width: 460px;
+  }
+  .accordion__item-title {
+    font-size: 18px;
+    line-height: 135%;
+    letter-spacing: -0.54px;
+    max-width: 368px;
+    padding: 15px 0;
+  }
+  .accordion__item-title::after {
+    right: -95px;
+  }
+  .accordion__item-title.active::after {
+    right: -83px;
+  }
+  .accordion__item-content {
+    font-size: 12px;
+    max-width: 390px;
+  }
+  .video__item {
+    height: 400px;
+  }
+  .video__item-iframe {
+    height: 400px;
+  }
+  .video__text {
+    max-width: 460px;
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .reviews__title::after {
     right: 320px;
@@ -1173,8 +2201,47 @@
   .reviews__slider-box {
     max-width: 460px;
   }
+  .services__item {
+    max-width: 298px;
+  }
 }
 /**/
+
+@media only screen and (max-width: 740px) {
+  .partners__item {
+    max-width: 154px;
+    height: 100px;
+  }
+  .partners__item::after {
+    height: 90px;
+    top: 5px;
+  }
+  .partners__item::before {
+    width: 136px;
+    right: 10px;
+  }
+  .partners__item:nth-child(6)::after,
+  .partners__item:nth-child(10)::after,
+  .partners__item:nth-child(13)::after {
+    display: block;
+  }
+  .partners__item:nth-child(16) {
+    display: block;
+  }
+  .partners__item:nth-child(7)::after,
+  .partners__item:nth-child(12)::after,
+  .partners__item:nth-child(16)::after {
+    display: none;
+  }
+  .partners__titlebox {
+    gap: 189px;
+    justify-content: start;
+  }
+  .partners__item-img {
+    width: 140px;
+    height: 81px;
+  }
+}
 
 @media only screen and (max-width: 639px) {
   .header__top {
@@ -1327,7 +2394,10 @@
   .experience,
   .tests,
   .visit,
-  .reviews {
+  .reviews,
+  .partners,
+  .talk,
+  .about {
     margin-bottom: 80px;
   }
 
@@ -1539,7 +2609,274 @@
   .want__title {
     max-width: 180px;
   }
+  .care__title {
+    font-size: 30px;
+    line-height: 110%;
+    letter-spacing: -0.6px;
+    max-width: 480px;
+  }
+  .care__box {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .care__btn {
+    max-width: none;
+  }
+  .services__item {
+    max-width: none;
+    flex-basis: 48%;
+    border-radius: 25px;
+    padding: 16px;
+  }
+  .services__more-btn {
+    margin: 0 auto;
+  }
+  .services__textbox {
+    max-width: 300px;
+  }
+  .services__box {
+    justify-content: space-between;
+  }
+  .insurance__price-text {
+    font-size: 231px;
+    line-height: 100%;
+    letter-spacing: -4.62px;
+  }
+  .insurance__price-text span {
+    font-size: 105px;
+    line-height: 100%;
+    letter-spacing: -2.1px;
+  }
+  .faq__inner {
+    flex-direction: column;
+  }
+  .faq__title::after {
+    display: none;
+  }
+  .accordion {
+    max-width: none;
+  }
+  .accordion__item-title {
+    max-width: none;
+    padding-right: 60px;
+  }
+  .accordion__item-title::after {
+    right: 0;
+  }
+  .accordion__item-title.active::after {
+    right: 9px;
+  }
+  .contact__titlebox {
+    gap: 0;
+  }
+  .health__title {
+    font-size: 30px;
+    line-height: 110%;
+    letter-spacing: -0.6px;
+    max-width: 380px;
+  }
+  .health__text {
+    font-size: 15px;
+    line-height: 140%;
+    max-width: 269px;
+    text-align: center;
+  }
+  .health__image-img {
+    min-height: 500px;
+  }
+  .health__suptitle {
+    margin-bottom: 1px;
+  }
+  .health {
+    margin-top: 50px;
+  }
+  .video__titlebox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .video__title {
+    max-width: 180px;
+    font-size: 24px;
+    line-height: 110%;
+    letter-spacing: -0.48px;
+  }
+  .video__text {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 444px;
+  }
+  .want--withbg {
+    min-height: 900px;
+    background-position: -525px;
+  }
+  .want--withbg .want__cards {
+    gap: 22px 25px;
+  }
+  .want__text {
+    font-size: 15px;
+    line-height: 140%;
+    max-width: 283px;
+  }
+  .want__cards {
+    margin-top: 30px;
+  }
+  .services__box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 25px;
+  }
+  .services__textbox {
+    margin-bottom: 20px;
+  }
+  .services__subtitle {
+    margin-bottom: 0;
+  }
+  .services__cards-morebtn {
+    display: none;
+  }
+  .services__card {
+    flex-basis: 48%;
+    min-width: 218px;
+  }
+  .services__card-text {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .services__card--crp,
+  .services__card--xray {
+    text-align: left;
+  }
+  .services__drug-img {
+    min-width: 210px;
+  }
+  .services__drug-title {
+    font-size: 24px;
+    max-width: 194px;
+  }
+  .services__drug-img {
+    object-position: -200px;
+  }
+  .offers__card-img {
+    height: 163px;
+    width: 300px;
+    max-width: none;
+    min-width: auto;
+  }
+  .offers__card-title {
+    max-width: 300px;
+    text-align: center;
+  }
+  .offers {
+    min-height: 440px;
+  }
+  .video__title--second {
+    max-width: 309px;
+    margin-bottom: 27px;
+  }
+  .video__text {
+    margin-bottom: 20px;
+  }
+  .partners__item {
+    max-width: 153px;
+  }
+  .partners__item:nth-child(6)::after,
+  .partners__item:nth-child(10)::after,
+  .partners__item:nth-child(13)::after {
+    display: none;
+  }
+  .partners__item:nth-child(16) {
+    display: block;
+  }
+  .partners__item:nth-child(7)::after,
+  .partners__item:nth-child(12)::after,
+  .partners__item:nth-child(16)::after {
+    display: block;
+  }
+  .partners__item:nth-child(16)::after {
+    display: none;
+  }
+  .partners__titlebox {
+    gap: 109px;
+  }
+  .partners__text {
+    font-size: 15px;
+    max-width: 220px;
+  }
+  .talk__question {
+    font-size: 20px;
+  }
+  .talk__title {
+    font-size: 48px;
+  }
+  .talk__text {
+    font-size: 18px;
+    max-width: 420px;
+    margin-bottom: 20px;
+  }
+  .talk__number--mob,
+  .talk__mail {
+    font-size: 30px;
+  }
+  .video--about .video__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .video--about .video__text {
+    text-align: left;
+    max-width: none;
+  }
+  .video--about .video__titlebox {
+    justify-content: start;
+    align-items: start;
+  }
+  .video--about .video__title {
+    max-width: 300px;
+    text-align: left;
+  }
+  .video--about .video__item {
+    height: 355px;
+  }
+  .video--about .video__item-iframe {
+    height: 355px;
+  }
+  .contact__image {
+    margin-bottom: 60px;
+  }
+  .contact__img {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+    border-radius: 35px;
+  }
 }
+
+@media only screen and (max-width: 540px) {
+  .insurance__list-item {
+    font-size: 12px;
+    line-height: 135%;
+    letter-spacing: -0.24px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .want__items {
+    gap: 30px 60px;
+  }
+  .want__wrapper {
+    gap: 60px;
+  }
+  .services__item {
+    flex-basis: fill;
+    max-width: 218px;
+  }
+}
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .want__wrapper {
@@ -1696,7 +3033,7 @@
     font-size: 12px;
   }
   .want__items {
-    gap: 30px 20px;
+    gap: 30px 21px;
   }
   .experience__text:after {
     right: 0;
@@ -1826,8 +3163,256 @@
     padding: 0;
     padding-bottom: 20px;
   }
+
+  .care__title {
+    max-width: 325px;
+    text-align: center;
+    display: block;
+  }
+  .care__title-img {
+    width: 75px;
+    vertical-align: middle;
+    height: 30px;
+    padding: 0;
+  }
+  .care__title-img:last-child {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+  .care {
+    margin-bottom: 80px;
+  }
+  .services__box {
+    flex-direction: column;
+  }
+  .services__textbox {
+    max-width: none;
+  }
+  .services__item {
+    // max-width: 138px;
+    // width: 100%;
+    height: 138px;
+    border-radius: 20px;
+
+    text-align: center;
+    padding: 6px;
+  }
+  .services__item-img {
+    width: 40px;
+    height: 40px;
+  }
+  .services__item-title {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .services__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .offers,
+  .compitences,
+  .want,
+  .experience,
+  .tests,
+  .visit,
+  .reviews,
+  .services,
+  .insurance,
+  .faq,
+  .contact,
+  .health,
+  .video {
+    margin-bottom: 80px;
+  }
+  .insurance__box-text {
+    font-size: 15px;
+    line-height: 140%;
+  }
+  .insurance__box {
+    height: 180px;
+    gap: 20px;
+    padding: 18px 48px;
+  }
+  .insurance__slider-pagination {
+    margin-top: 22px;
+  }
+  .insurance__price-text {
+    font-size: 151px;
+    letter-spacing: -3.02px;
+    span {
+      font-size: 65px;
+      letter-spacing: -1.3px;
+    }
+  }
+  .faq__title {
+    margin-bottom: 25px;
+  }
+  .contact__form-input::placeholder,
+  .contact__form-area::placeholder {
+    font-size: 20px;
+    letter-spacing: -0.2px;
+  }
+  .contact__titlebox {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .contact__title {
+    margin-bottom: 25px;
+  }
+  .contact__box,
+  .contact__text {
+    max-width: none;
+  }
+  .contact__number {
+    font-size: 24px;
+    line-height: 110%;
+  }
+  .contact__number img {
+    height: 34px;
+    width: 34px;
+  }
+  .contact__form-area {
+    min-height: 160px;
+  }
+  .want--withbg {
+    background-position: -650px 306px;
+    background-size: cover;
+    .want__cards {
+      justify-content: center;
+      align-items: center;
+    }
+    .want__card-wrapper {
+      width: auto;
+    }
+    .want__title {
+      font-size: 32px;
+      line-height: 110%;
+      letter-spacing: -0.64px;
+      max-width: 300px;
+      margin: 0 auto 25px;
+    }
+    .want__wrapper {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .want__text {
+      margin: 0 auto;
+    }
+  }
+  .services__cards {
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+  .services__card {
+    flex-basis: 100%;
+    max-width: 298px;
+  }
+  .services__cards-morebtn {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .services__drug {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .services__drug-img {
+    min-height: 151px;
+    min-width: 280px;
+    object-position: center;
+  }
+  .services__drug-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .services__drug-title {
+    margin: 0;
+    margin-bottom: 12px;
+    max-width: none;
+    max-width: 239px;
+  }
+  .services__drug-text {
+    max-width: 270px;
+  }
+  .offers__box {
+    justify-content: center;
+    align-items: center;
+  }
+  .partners__item {
+    max-width: 154px;
+  }
+  .partners__titlebox {
+    flex-direction: column;
+    gap: 25px;
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .partners__item {
+    max-width: 150px;
+  }
+  .partners__item::before {
+    width: 132px;
+  }
+
+  .partners__item:nth-child(6)::after,
+  .partners__item:nth-child(13)::after {
+    display: block;
+  }
+  .partners__item:nth-child(4)::after,
+  .partners__item:nth-child(7)::after,
+  .partners__item:nth-child(10)::after,
+  .partners__item:nth-child(12)::after,
+  .partners__item:nth-child(14)::after {
+    display: none;
+  }
+  .contact__img {
+    height: 400px;
+  }
 }
 /**/
+
+@media only screen and (max-width: 440px) {
+  .insurance__inner--mob,
+  .insurance__mobile-wrapper {
+    display: none;
+  }
+  .insurance__titlebox {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 25px;
+  }
+  .insurance__mobile-slider {
+    display: block;
+  }
+  .insurance__box {
+    flex-direction: column;
+  }
+  .insurance__box-img {
+    width: 43px;
+    height: 62px;
+  }
+  .insurance__box {
+    height: 209px;
+    gap: 10px;
+  }
+  .insurance__box-text {
+    text-align: center;
+  }
+  .insurance__link {
+    margin-bottom: 40px;
+  }
+  .accordion__item-content {
+    max-width: 290px;
+  }
+}
 
 @media only screen and (max-width: 415px) {
   .top__info-text {
@@ -1860,6 +3445,37 @@
     height: 260px;
     border-radius: 10px;
     object-fit: cover;
+  }
+  .want__items {
+    gap: 30px 20px;
+  }
+  .health__title {
+    max-width: 300px;
+    font-size: 30px;
+  }
+  .health__box {
+    max-width: 300px;
+    width: 100%;
+  }
+  .health__btn {
+    max-width: 300px;
+  }
+  .health__image-img {
+    min-height: 400px;
+  }
+  .talk__title {
+    font-size: 38px;
+  }
+  .talk__question,
+  .talk__text {
+    font-size: 15px;
+  }
+  .talk__number--mob,
+  .talk__mail {
+    font-size: 24px;
+  }
+  .talk {
+    min-height: auto;
   }
 }
 /**/
