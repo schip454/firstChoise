@@ -4,10 +4,10 @@
 @import "global";
 
 .header {
+  background: $white;
   position: relative;
   z-index: 101110;
   &__inner {
-    background: $white;
     border-radius: 0px 0px 35px 35px;
   }
   &__top {
@@ -1160,7 +1160,7 @@
   &__text {
     font-size: 19px;
     line-height: 140%;
-    max-width: 468px;
+    max-width: 435px;
   }
   &__items {
     display: flex;
@@ -1495,17 +1495,19 @@
   &__inner {
     overflow: hidden;
   }
+  &__items-wrapper {
+    display: flex;
+  }
   &__items {
     position: absolute;
     bottom: 0;
-    overflow: hidden;
-    left: 0px;
+    // left: 1000px;
+    left: 0;
     display: flex;
     gap: 50px;
     align-items: center;
-    overflow: hidden;
-    animation: 20s linear infinite;
-    animation-name: running;
+    animation: 60s linear infinite;
+    animation-name: scrolling;
   }
   &__item {
     cursor: pointer;
@@ -1514,14 +1516,82 @@
     max-width: none;
   }
 }
-@keyframes running {
-  0% {
+// @keyframes running {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(-3000px);
+//   }
+// }
+@keyframes scrolling {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-3000px);
+  to {
+    transform: translateX(-100%);
   }
 }
+
+// /* LOGOS */
+
+// #logos .container {
+//   position: relative;
+//   margin-bottom: 100px;
+// }
+
+// .logo__w {
+//   display: flex;
+//   position: relative;
+// }
+
+// .logo__gradient {
+//   background: rgb(0, 0, 0);
+//   background: linear-gradient(
+//     90deg,
+//     rgba(1, 0, 9, 1) 0%,
+//     rgba(1, 0, 9, 1) 6%,
+//     rgba(255, 255, 255, 0) 50%,
+//     rgba(1, 0, 9, 1) 94%,
+//     rgba(1, 0, 9, 1) 100%
+//   );
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 10;
+// }
+
+// .logos__wrapper {
+//   display: flex;
+//   align-items: center;
+//   overflow: hidden;
+//   transform: translateX(0);
+//   animation: 10s scrolling infinite linear;
+// }
+
+// @keyframes scrolling {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
+
+// .logos__item {
+//   display: flex;
+//   align-items: center;
+//   gap: 15px;
+//   padding-right: 30px;
+// }
+
+// .logos__title {
+//   font-weight: 600;
+//   font-size: 24px;
+//   color: rgba(255, 255, 255, 0.9);
+// }
 
 .breadcrumbs {
   &__list {
@@ -2089,6 +2159,7 @@
   &__image-img {
     margin: 0 auto;
     text-align: center;
+    width: 100%;
   }
 }
 

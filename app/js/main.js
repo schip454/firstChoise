@@ -5,6 +5,17 @@ burger.addEventListener("click", () => {
   burgerContent.classList.toggle("active");
 });
 
+const dropdownBtn = document.querySelector(".menu__list-dropdown");
+const dropdownBody = document.querySelector(".menu__dropdown-content");
+dropdownBtn.addEventListener("click", () => {
+  dropdownBtn.classList.toggle("active");
+  if (dropdownBtn.classList.contains("active")) {
+    dropdownBody.style.maxHeight = "200px";
+  } else {
+    dropdownBody.style.maxHeight = 0;
+  }
+});
+
 // document.querySelector(".menu__list-dropdown").addEventListener("click", () => {
 //   if (
 //     document.querySelector(".menu__dropdown-content").style.maxHeight == "200px"
@@ -96,7 +107,8 @@ const swiperSecond = new Swiper(".announcements__slider", {
 });
 
 const swiperThird = new Swiper(".offers__slider", {
-  // Optional parameters
+  slidesPerView: "auto",
+
   navigation: {
     nextEl: ".offers__pagination-next",
     prevEl: ".offers__pagination-prev",
@@ -104,24 +116,6 @@ const swiperThird = new Swiper(".offers__slider", {
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: true,
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 15,
-    },
-    480: {
-      slidesPerView: 1.26,
-    },
-    641: {
-      slidesPerView: 1.4,
-    },
-    961: {
-      slidesPerView: 2.2,
-    },
-    1201: {
-      slidesPerView: 3,
-    },
   },
 });
 
@@ -151,7 +145,7 @@ const swiperFour = new Swiper(".reviews__slider", {
         type: "bullets",
       },
     },
-    1025: {
+    1201: {
       pagination: {
         el: ".reviews__slider-pagination",
         type: "fraction",
@@ -176,6 +170,7 @@ const swiperFour = new Swiper(".reviews__slider", {
     },
   },
 });
+
 const swiperFive = new Swiper(".insurance__slider", {
   // Optional parameters
   loop: true,
@@ -212,15 +207,6 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
   });
 });
 
-const videoItem = document.querySelector(".video__item");
-const videoItemSecond = document.querySelector(".video__item--second");
-const videoContainer = document.querySelector(".video__box");
-const videoContainerSecond = document.querySelector(".video__box--second");
-if (window.innerWidth <= 960) {
-  videoContainer.appendChild(videoItem);
-  videoContainerSecond.appendChild(videoItemSecond);
-}
-
 // Показывает контент по клику на кнопку Show more
 const buttons = document.querySelectorAll(".services__more-btn");
 const hiddenCards = document.querySelectorAll("[data-card]");
@@ -244,25 +230,14 @@ buttons.forEach((value) => {
   });
 });
 
-const checkboxItem = document.querySelector(".map__toggle-input");
-const checkboxText = document.querySelector(".map__toggle-text");
-const mapInner = document.querySelector(".map__inner");
-const mapCards = document.querySelector(".map__cards");
-const mapCardsWrapper = document.querySelector(".map__cards-wrapper");
-
-checkboxItem.addEventListener("click", () => {
-  if (checkboxItem.checked) {
-    checkboxText.classList.add("checked");
-    mapInner.style.display = "none";
-    mapCards.style.display = "flex";
-    mapCardsWrapper.style.display = "block";
-  } else {
-    checkboxText.classList.remove("checked");
-    mapInner.style.display = "flex";
-    mapCards.style.display = "none";
-    mapCardsWrapper.style.display = "none";
-  }
-});
+// let widtLogosWrapper = 0;
+// const logosWrapper = document.querySelector(".brands__items-wrapper");
+// console.log(logosWrapper.children);
+// Array.from(logosWrapper.children).forEach(function (el, index) {
+//   widtLogosWrapper += el.offsetWidth;
+// });
+// widtLogosWrapper = widtLogosWrapper * 4;
+// document.querySelector(".brands__items").style.width = widtLogosWrapper + "px";
 
 // const tickerItem = document.querySelectorAll(".brands__item");
 

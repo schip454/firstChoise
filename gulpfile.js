@@ -36,15 +36,21 @@ function images() {
 }
 
 function scripts() {
-  return src([
-    // 'node_modules/jquery/dist/jquery.js',
-    "node_modules/swiper/swiper-bundle.min.js",
-    "app/js/main.js",
-  ])
-    .pipe(concat("main.min.js"))
-    .pipe(uglify())
-    .pipe(dest("app/js"))
-    .pipe(browserSync.stream());
+  return (
+    src([
+      // 'node_modules/jquery/dist/jquery.js',
+      "node_modules/swiper/swiper-bundle.min.js",
+      // "app/js/video.js",
+      // "app/js/toggleMap.js",
+      "app/js/main.js",
+    ])
+      // .pipe(concat("video.min.js"))
+      // .pipe(concat("toggleMap.min.js"))
+      .pipe(concat("main.min.js"))
+      .pipe(uglify())
+      .pipe(dest("app/js"))
+      .pipe(browserSync.stream())
+  );
 }
 
 function styles() {
@@ -67,6 +73,8 @@ function build() {
       "app/css/style.min.css",
       "app/fonts/**/*",
       "app/js/main.min.js",
+      "app/js/toggleMap.min.js",
+      "app/js/video.min.js",
       "app/*.html",
     ],
     { base: "app" }
@@ -75,7 +83,15 @@ function build() {
 
 function watching() {
   watch(["app/scss/**/*.scss"], styles);
-  watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
+  watch(
+    [
+      "app/js/**/*.js",
+      "!app/js/main.min.js",
+      "!app/js/toggleMap.min.js",
+      "!app/js/video.min.js",
+    ],
+    scripts
+  );
   watch(["app/*.html"]).on("change", browserSync.reload);
 }
 
