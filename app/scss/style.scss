@@ -241,6 +241,15 @@
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .top {
   overflow: hidden;
   padding: 65px 0 290px;
@@ -256,14 +265,18 @@
     font-weight: 700;
     font-size: 81px;
     line-height: 110%;
-    max-width: 754px;
+    max-width: 890px;
+    text-transform: uppercase;
     img {
-      display: inline-block;
-      padding-right: 50px;
+      animation: rotate 8s infinite linear;
     }
     span {
       color: $red;
     }
+  }
+  &__image {
+    padding-right: 142px;
+    display: inline-block;
   }
   &__text {
     font-weight: 500;
@@ -1627,6 +1640,7 @@
     img {
       width: 25px;
       height: 25px;
+      animation: rotate 8s infinite linear;
     }
   }
   &__title {

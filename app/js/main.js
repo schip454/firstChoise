@@ -1,3 +1,5 @@
+new WOW().init();
+
 const burger = document.querySelector(".header__hamburger");
 const burgerContent = document.querySelector(".header__content");
 burger.addEventListener("click", () => {
