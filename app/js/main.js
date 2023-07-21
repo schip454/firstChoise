@@ -1,4 +1,4 @@
-new WOW().init();
+// new WOW().init();
 
 const burger = document.querySelector(".header__hamburger");
 const burgerContent = document.querySelector(".header__content");
@@ -197,16 +197,42 @@ const accordionItemHeaders = document.querySelectorAll(
   ".accordion__item-title"
 );
 
-accordionItemHeaders.forEach((accordionItemHeader) => {
-  accordionItemHeader.addEventListener("click", (event) => {
-    accordionItemHeader.classList.toggle("active");
-    const accordionItemBody = accordionItemHeader.nextElementSibling;
-    if (accordionItemHeader.classList.contains("active")) {
+// accordionItemHeaders.forEach((accordionItemHeader) => {
+//   accordionItemHeader.addEventListener("click", (event) => {
+//     accordionItemHeader.classList.toggle("active");
+//     const accordionItemBody = accordionItemHeader.nextElementSibling;
+//     if (accordionItemHeader.classList.contains("active")) {
+//       accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+//     } else {
+//       accordionItemBody.style.maxHeight = 0;
+//     }
+//   });
+// });
+
+for (let i = 0; i < accordionItemHeaders.length; i++) {
+  accordionItemHeaders[i].addEventListener("click", function () {
+    accordionItemHeaders.forEach((item) => {
+      item.classList.remove("active");
+      const accordionItemBody = item.nextElementSibling;
+      accordionItemBody.style.maxHeight = 0;
+    });
+    this.classList.toggle("active");
+    const accordionItemBody = this.nextElementSibling;
+    if (this.classList.contains("active")) {
       accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
     } else {
       accordionItemBody.style.maxHeight = 0;
     }
   });
+}
+
+accordionItemHeaders.forEach((accordionItemHeader) => {
+  const accordionItemBody = accordionItemHeader.nextElementSibling;
+  if (accordionItemHeader.classList.contains("active")) {
+    accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+  } else {
+    accordionItemBody.style.maxHeight = 0;
+  }
 });
 
 // Показывает контент по клику на кнопку Show more

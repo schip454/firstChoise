@@ -87,8 +87,10 @@
   .partners__item:nth-child(1),
   .partners__item:nth-child(2),
   .partners__item:nth-child(9),
-  .partners__item:nth-child(16),
   .partners__item:nth-child(5) {
+    display: none;
+  }
+  .partners__item:nth-child(16):after {
     display: none;
   }
   .partners__items {
@@ -173,16 +175,16 @@
   }
 
   .want__item {
-    max-width: 245px;
+    max-width: 262px;
   }
   .want__item-text {
     font-size: 15px;
     line-height: 140%;
   }
   .want__items {
-    justify-content: center;
+    justify-content: start;
     gap: 50px 60px;
-    max-width: 600px;
+    max-width: 625px;
   }
 
   .experience__text {
@@ -300,6 +302,7 @@
   }
   .services__textbox {
     max-width: 633px;
+    width: 100%;
   }
   .services__item-title {
     font-size: 19px;
@@ -380,6 +383,7 @@
   .insurance__price-text span {
     margin-right: 0;
     margin-left: 20px;
+    margin-top: 29px;
   }
   .accordion {
     max-width: 633px;
@@ -503,7 +507,13 @@
     max-width: none;
   }
   .services__textbox {
-    max-width: 400px;
+    // max-width: 400px;
+  }
+  .services__subtitle {
+    max-width: 495px;
+  }
+  .services__text {
+    max-width: 380px;
   }
   .services__subtitle--cards {
     max-width: 400px;
@@ -744,6 +754,94 @@
   .reviews__slider-info {
     font-size: 14px;
   }
+  .offers__pagination-box {
+    display: none;
+  }
+  .offers__box {
+    justify-content: start;
+    gap: 331px;
+  }
+  .offers__pagination-text {
+    max-width: 280px;
+  }
+  .want__card-wrapper {
+    min-width: auto;
+  }
+  .want__card:nth-child(2) .want__card-text {
+    max-width: 226px;
+  }
+  .services__textbox {
+    margin-bottom: 5px;
+  }
+  .services__card:nth-child(5) .services__card-img {
+    margin-bottom: -15px;
+  }
+  .offers {
+    padding-bottom: 0;
+  }
+  .video__title--second {
+    display: none;
+  }
+  .video__tablet-title {
+    display: block;
+    max-width: none;
+    margin-bottom: 25px;
+  }
+  .video__box--second {
+    justify-content: start;
+    .video__time {
+      margin-bottom: 48px;
+    }
+    .video__text {
+      margin-bottom: 20px;
+    }
+    .video__text:last-child {
+      margin-bottom: 0px;
+      color: $red;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 152px;
+        bottom: -57px;
+        background-image: url(../images/icon/video-arrow.svg);
+        width: 108px;
+        height: 40px;
+      }
+    }
+  }
+  .about {
+    background-image: url(../images/about-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .about__text {
+    max-width: 350px;
+  }
+  .video--about .video__titlebox {
+    display: block;
+  }
+  .video--about .video__title {
+    margin-bottom: 25px;
+  }
+  .offers {
+    padding-bottom: 60px;
+  }
+  .offers--solo {
+    padding-bottom: 0;
+  }
+  .contact__box,
+  .contact__text {
+    max-width: 359px;
+  }
+  .contact__text {
+    margin-bottom: 10px;
+  }
+  .contact__titlebox {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -983,7 +1081,7 @@
     //   }
     // }
     &__content {
-      padding: 20px;
+      padding: 0;
       color: $white;
       border: none;
       position: absolute;
@@ -1009,7 +1107,7 @@
 
     .menu {
       letter-spacing: normal;
-      padding: 30px 0 30px;
+      padding: 60px 30px;
       // flex-direction: column;
       justify-content: start;
       gap: 360px;
@@ -1470,7 +1568,7 @@
     max-width: 385px;
   }
   .want__items {
-    gap: 30px 80px;
+    gap: 30px 60px;
   }
   .video__item-iframe {
     width: 646px;
@@ -1529,6 +1627,16 @@
     font-size: 19px;
   }
   .reviews__slider-item {
+  }
+  .menu {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .services__card:nth-child(5) .services__card-img {
+    margin-bottom: 10px;
   }
 }
 
@@ -1595,6 +1703,7 @@
   }
   .top__slider .swiper-slide {
     img {
+      object-position: right;
       object-fit: cover;
       border-radius: 35px;
     }
@@ -1910,6 +2019,7 @@
     margin-bottom: 30px;
     span {
       margin-left: 0;
+      margin-top: 0;
     }
   }
   .insurance__price-info {
@@ -2089,7 +2199,7 @@
     margin-bottom: 0;
   }
   .offers {
-    min-height: 560px;
+    min-height: 590px;
   }
   .video__text {
     margin-bottom: 20px;
@@ -2135,10 +2245,6 @@
   }
   .top__title {
     max-width: 400px;
-    img {
-      text-indent: 50px;
-      margin-right: 50px;
-    }
   }
   .top__slider-img {
     min-height: 400px;
@@ -2167,7 +2273,53 @@
     margin-top: 64px;
   }
   .header__content {
-    padding: 10px;
+    padding: 0px;
+  }
+
+  .services__card {
+    flex-basis: 48%;
+    max-width: none;
+    min-width: 298px;
+  }
+  .services__cards {
+    margin-bottom: 22px;
+  }
+  .services__cards-morebtn {
+    margin-bottom: 60px;
+  }
+  .services__card:nth-child(5) .services__card-img {
+    margin-bottom: -14px;
+  }
+  .video__title--second {
+    display: block;
+  }
+  .video__tablet {
+    display: none;
+  }
+  .video__box--second {
+    justify-content: start;
+    .video__time {
+      margin-bottom: 17px;
+    }
+  }
+  .video__text:nth-child(3) {
+    margin-bottom: 0;
+    color: $red;
+  }
+  .offers__card-img {
+    height: 297px;
+  }
+  .footer__inner {
+    padding-top: 0;
+  }
+  .talk {
+    min-height: 420px;
+  }
+  .header .menu {
+    padding: 40px 10px;
+  }
+  .announcements__notes-text {
+    max-width: 253px;
   }
 }
 /**/
@@ -2184,7 +2336,7 @@
   }
   .health__title {
     font-size: 40px;
-    max-width: 620px;
+    max-width: 450px;
     text-align: center;
   }
   .health__inner {
@@ -2209,18 +2361,20 @@
     min-height: 680px;
     object-fit: cover;
   }
-  .services__card {
-    flex-basis: 48%;
-    max-width: none;
-    min-width: 298px;
-  }
+  // .services__card {
+  //   flex-basis: 48%;
+  //   max-width: none;
+  //   min-width: 298px;
+  // }
   .services__drug {
-    align-items: start;
+    align-items: center;
     gap: 20px;
+    height: 220px;
   }
 
   .services__drug-img {
-    min-height: 252px;
+    min-height: 200px;
+    height: 200px;
     max-width: 460px;
     min-width: 290px;
     width: 100%;
@@ -2263,8 +2417,7 @@
     max-width: 300px;
   }
   .services__more-btn {
-    margin-right: auto;
-    margin-left: 245px;
+    margin: 0 auto 60px;
   }
   .services__wrapper {
     max-width: 640px;
@@ -2280,6 +2433,12 @@
   }
   .contact__form-box {
     flex-direction: column;
+  }
+  .services__box {
+    justify-content: space-between;
+  }
+  .services__subtitle--cards {
+    max-width: 210px;
   }
 }
 
@@ -2385,6 +2544,13 @@
     font-size: 15px;
     line-height: 140%;
   }
+  .offers__box {
+    gap: 111px;
+  }
+  .contact__form-box,
+  .contact__form {
+    gap: 10px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2400,6 +2566,18 @@
   }
   .services__item {
     max-width: 298px;
+  }
+  .services__subtitle--cards {
+  }
+  .services__textbox {
+    max-width: none;
+    width: auto;
+  }
+  .services__box {
+    gap: 246px;
+  }
+  .services__box {
+    justify-content: start;
   }
 }
 /**/
@@ -2437,6 +2615,18 @@
   .partners__item-img {
     width: 140px;
     height: 81px;
+  }
+  .services__box {
+    gap: 228px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .services__box {
+    gap: 188px;
+  }
+  .services__card:nth-child(5) .services__card-img {
+    margin-bottom: 10px;
   }
 }
 
@@ -2787,7 +2977,7 @@
     max-width: 230px;
   }
   .compitences__text {
-    max-width: 228px;
+    max-width: 222px;
   }
   .compitences__items-wrapper {
     overflow-x: scroll;
@@ -2809,7 +2999,7 @@
     gap: 25px;
   }
   .want__wrapper {
-    gap: 100px;
+    gap: 77px;
     justify-content: start;
   }
   .want__title {
@@ -2929,13 +3119,7 @@
   .want__cards {
     margin-top: 30px;
   }
-  .services__box {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 25px;
-  }
+
   .services__textbox {
     margin-bottom: 20px;
   }
@@ -2965,11 +3149,11 @@
     max-width: 194px;
   }
   .services__drug-img {
-    object-position: -200px;
+    // object-position: -200px;
   }
   .offers__card-img {
-    height: 163px;
-    width: 300px;
+    height: 206px;
+    width: 380px;
     max-width: none;
     min-width: auto;
   }
@@ -2978,7 +3162,7 @@
     text-align: center;
   }
   .offers {
-    min-height: 440px;
+    min-height: 464px;
   }
   .video__title--second {
     max-width: 309px;
@@ -3068,7 +3252,7 @@
     height: 375px;
   }
   .top__title img {
-    margin-right: 25px;
+    // margin-right: 25px;
     height: 25px;
     width: 25px;
   }
@@ -3084,17 +3268,102 @@
   .map__cards-wrapper {
     display: none;
   }
+  .care__title-img {
+    width: 100px;
+    padding: 0;
+    margin: 0 5px;
+  }
+  .care__title {
+    gap: 5px;
+    max-width: 479px;
+  }
+  .offers__box {
+    gap: 102px;
+  }
+  .offers__title {
+    white-space: nowrap;
+  }
+  .offers__pagination-text {
+    width: 100%;
+  }
+  .offers__pagination {
+    margin-right: 0;
+  }
+  .want__item:nth-child(2) .want__item-text {
+    max-width: 132px;
+  }
+  .want__item:nth-child(3) .want__item-text {
+    max-width: 185px;
+  }
+  .services__textbox {
+    max-width: 383px;
+  }
+  .services__subtitle {
+    margin-bottom: 15px;
+  }
+  .insurance__titlebox {
+    align-items: start;
+  }
+  .insurance__box-text {
+    font-size: 15px;
+  }
+  .insurance__box {
+    height: 180px;
+  }
+  .services__drug-title {
+    margin-bottom: 10px;
+  }
+  .services__drug {
+    height: 170px;
+  }
+  .services__drug-img {
+    min-height: 150px;
+    height: 150px;
+    max-width: 460px;
+    min-width: 210px;
+    width: 100%;
+  }
+
+  .offers--solo {
+    .offers__card {
+      gap: 10px;
+    }
+    .offers__card-btn,
+    .offers__card-wrapper {
+      max-width: 380px;
+      width: 100%;
+    }
+    .offers__card-title {
+      margin: 0 auto 15px;
+    }
+  }
+  .partners__titlebox {
+    justify-content: space-between;
+  }
+  .partners__text {
+    max-width: 190px;
+  }
+  .header .menu__list-dropdown::after {
+    right: 50px;
+  }
 }
 
 @media only screen and (max-width: 580px) {
   .footer__social-text {
-    max-width: 150px;
+    max-width: 115px;
+    font-size: 15px;
   }
   .footer__social {
     max-width: 150px;
   }
   .footer__social .logo {
     margin-bottom: 35px;
+  }
+  .services__inner {
+    gap: 16px;
+  }
+  .services__card:nth-child(5) .services__card-img {
+    margin-bottom: 0px;
   }
 }
 
@@ -3103,6 +3372,12 @@
     font-size: 12px;
     line-height: 135%;
     letter-spacing: -0.24px;
+  }
+  .services__textbox {
+    max-width: 300px;
+  }
+  .services__subtitle {
+    margin-bottom: 15px;
   }
 }
 
@@ -3126,6 +3401,9 @@
     letter-spacing: -0.24px;
     max-width: 160px;
   }
+  .services__inner {
+    gap: 22px;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -3134,7 +3412,7 @@
     gap: 0;
   }
   .want__title {
-    max-width: 250px;
+    max-width: 200px;
   }
   .header__hamburger-text {
     display: none;
@@ -3279,7 +3557,7 @@
 
   .announcements,
   .map {
-    padding-bottom: 35px;
+    padding-bottom: 80px;
   }
   .map__box,
   .offers__box,
@@ -3714,6 +3992,44 @@
   }
   .top__info {
     margin-top: 5px;
+  }
+  .offers__box {
+    gap: 15px;
+  }
+  .services__box {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    text-align: start;
+    gap: 25px;
+  }
+  .contact__form-input {
+    height: 48px;
+  }
+  .contact__form-area {
+    border-radius: 24px;
+  }
+  .services__card:nth-child(5) .services__card-img {
+    margin-bottom: -18px;
+  }
+  .services__drug {
+    height: auto;
+  }
+  .offers--solo {
+    .offers__card-img {
+      width: 300px;
+      height: 163px;
+    }
+    .offers__box {
+      text-align: center;
+      width: auto;
+      justify-content: center;
+      align-items: center;
+    }
+    .offers__title {
+      margin-bottom: 0;
+    }
+    min-height: 440px;
   }
 }
 /**/

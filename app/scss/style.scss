@@ -1215,7 +1215,8 @@
     gap: 28px;
     align-items: center;
   }
-  &__card-box {
+  &__card-wrapper {
+    min-width: 355px;
   }
   &__card-text {
     font-weight: 400;
@@ -2147,6 +2148,7 @@
     font-weight: 500;
     font-size: 25px;
     line-height: 135%;
+    margin-bottom: 10px;
   }
   &__title {
     max-width: 950px;
@@ -2190,6 +2192,9 @@
     justify-content: space-between;
   }
   &__titlebox {
+  }
+  &__tablet-title {
+    display: none;
   }
   &__title {
     margin-bottom: 50px;
