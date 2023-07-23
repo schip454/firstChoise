@@ -200,12 +200,19 @@
   .experience__inner {
     min-height: 213px;
   }
+  .experience__text {
+    margin-top: 30px;
+  }
   .experience__text:after {
     font-weight: 900;
     font-size: 250px;
     line-height: 80%;
     top: -32px;
     right: -330px;
+    display: block;
+  }
+  .experience__num {
+    display: none;
   }
   .experience__star--1 {
     img {
@@ -454,8 +461,9 @@
     max-width: 307px;
   }
   .want--withbg {
-    min-height: 600px;
-    background-position: bottom;
+    min-height: 700px;
+    background-image: url(../images/slides/want-bg--mob.jpg);
+    background-position: center;
   }
   .want--withbg .want__inner {
     padding: 60px 0;
@@ -2143,7 +2151,7 @@
   }
   .want--withbg {
     min-height: 750px;
-    background-position: -350px;
+    background-position: -200px;
     .want__wrapper {
       display: block;
     }
@@ -2487,6 +2495,8 @@
     justify-content: center;
     gap: 8px;
     img {
+      display: block;
+      margin: 0 auto;
       width: 30px;
       height: 30px;
     }
@@ -3106,7 +3116,7 @@
   }
   .want--withbg {
     min-height: 900px;
-    background-position: -525px;
+    background-position: -340px;
   }
   .want--withbg .want__cards {
     gap: 22px 25px;
@@ -3874,7 +3884,7 @@
     min-height: 160px;
   }
   .want--withbg {
-    background-position: -650px 306px;
+    background-position: -532px 296px;
     background-size: cover;
     .want__cards {
       justify-content: center;

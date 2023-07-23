@@ -30,6 +30,46 @@ body {
   }
 }
 
+.hidden {
+  opacity: 0;
+  animation: hidden;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.swiper-slide .hidden .swiper-slide-visible .swiper-slide-active {
+  opacity: 0;
+  animation: hidden;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hidden {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.spin {
+  // animation: spin !important;
+  animation-iteration-count: 1;
+  // animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(0) rotate(45deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
 .section-title {
   font-weight: 700;
   font-size: 54px;

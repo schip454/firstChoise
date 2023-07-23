@@ -160,9 +160,16 @@
       <section class="faq">
         <div class="container">
           <div class="faq__inner">
-            <h2 class="faq__title section-title">F.A.Q.</h2>
+            <h2
+              class="faq__title section-title wow animate__fadeIn"
+              data-wow-duration=".7s"
+              data-wow-offset="200">
+              F.A.Q.
+            </h2>
             <div class="accordion">
-              <div class="accordion__item">
+              <div
+                class="accordion__item wow animate__slideInRight"
+                data-wow-duration=".4s">
                 <div class="accordion__item-title active">
                   WHEN SHOULD I GO TO URGENT CARE?
                 </div>
@@ -176,7 +183,9 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion__item">
+              <div
+                class="accordion__item wow animate__slideInRight"
+                data-wow-duration=".4s">
                 <div class="accordion__item-title">
                   WHEN SHOULD I GO TO THE HOSPITAL EMERGENCY ROOM?
                 </div>
@@ -192,7 +201,9 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion__item">
+              <div
+                class="accordion__item wow animate__slideInRight"
+                data-wow-duration=".4s">
                 <div class="accordion__item-title">
                   DO I NEED AN APPOINTMENT?
                 </div>
@@ -204,7 +215,9 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion__item">
+              <div
+                class="accordion__item wow animate__slideInRight"
+                data-wow-duration=".4s">
                 <div class="accordion__item-title">
                   WHAT IF I DON’T HAVE INSURANCE?
                 </div>
@@ -215,7 +228,9 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion__item">
+              <div
+                class="accordion__item wow animate__slideInRight"
+                data-wow-duration=".4s">
                 <div class="accordion__item-title">
                   WHAT TYPE OF PAYMENT DO YOU ACCEPT?
                 </div>
@@ -226,7 +241,9 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion__item">
+              <div
+                class="accordion__item wow animate__slideInRight"
+                data-wow-duration=".4s">
                 <div class="accordion__item-title">
                   WHAT SHOULD I BRING WITH ME?
                 </div>
@@ -248,16 +265,26 @@
       <section class="contact">
         <div class="container">
           <div class="contact__titlebox">
-            <h2 class="contact__title section-title">
-              DIDN’T FIND THE ANSWER TO YOUR QUESTION?
+            <h2
+              class="contact__title section-title wow animate__fadeIn"
+              data-wow-duration=".7s"
+              data-wow-offset="200">
+              Contact us
             </h2>
             <div class="contact__box">
-              <p class="contact__text">
+              <p
+                class="contact__text wow hidden animate__fadeIn"
+                data-wow-duration=".3s"
+                data-wow-delay=".4s">
                 Drop us a line, If you have any comments, suggestions, or
                 remaining questions.
                 <span>Your opinions and inquiries matter to us.</span>
               </p>
-              <a href="tel:734-333-8001" class="contact__number">
+              <a
+                href="tel:734-333-8001"
+                class="contact__number wow hidden animate__fadeIn"
+                data-wow-duration=".3s"
+                data-wow-delay=".8s">
                 <img src="images/icon/phone.svg" alt="Phone icon" />
                 734-333-8001
               </a>
@@ -267,21 +294,35 @@
             <div class="contact__form-box">
               <input
                 type="text"
-                class="contact__form-input"
+                class="contact__form-input wow animate__fadeIn hidden"
+                data-wow-duration=".3s"
+                data-wow-delay=".1s"
                 placeholder="Name" />
               <input
                 type="text"
-                class="contact__form-input"
-                placeholder="Email (required)" />
+                class="contact__form-input wow animate__fadeIn hidden"
+                data-wow-duration=".3s"
+                data-wow-delay=".2s"
+                placeholder="Email" />
             </div>
             <input
               type="text"
-              class="contact__form-input"
+              class="contact__form-input wow animate__fadeIn hidden"
+              data-wow-duration=".3s"
+              data-wow-delay=".4s"
               placeholder="Subject" />
             <textarea
-              class="contact__form-area"
+              class="contact__form-area wow animate__fadeIn hidden"
+              data-wow-duration=".3s"
+              data-wow-delay=".6s"
               placeholder="Your message"></textarea>
-            <button type="submit" class="contact__form-btn btn">Submit</button>
+            <button
+              type="submit"
+              class="contact__form-btn btn wow animate__fadeIn hidden"
+              data-wow-duration=".3s"
+              data-wow-delay=".8s">
+              Submit
+            </button>
           </form>
         </div>
       </section>
@@ -289,9 +330,18 @@
       <section class="offers">
         <div class="container">
           <div class="offers__box">
-            <h2 class="offers__title section-title">Special offers</h2>
+            <h2
+              class="offers__title section-title wow animate__fadeIn"
+              data-wow-duration=".7s"
+              data-wow-offset="200">
+              Special offers
+            </h2>
             <div class="offers__pagination">
-              <p class="offers__pagination-text">
+              <p
+                class="offers__pagination-text wow hidden animate__fadeIn"
+                data-wow-duration=".3s"
+                data-wow-delay=".3s"
+                data-wow-offset="200">
                 Contact us if you wish to get one of these special offers
               </p>
               <div class="offers__pagination-box">
@@ -620,6 +670,8 @@
         </div>
       </div>
     </footer>
+    <script src="js/wow.min.js"></script>
+    <script src="js/gsap.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

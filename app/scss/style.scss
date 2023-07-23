@@ -2,6 +2,7 @@
 @import "libs";
 @import "reset";
 @import "global";
+@import "animate";
 
 .header {
   background: $white;
@@ -265,7 +266,7 @@
     font-weight: 700;
     font-size: 81px;
     line-height: 110%;
-    max-width: 890px;
+    max-width: 900px;
     text-transform: uppercase;
     img {
       animation: rotate 8s infinite linear;
@@ -1150,6 +1151,7 @@
   background-position: bottom bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url(../images/slides/want-bg--2.jpg);
   .want__inner {
     display: block;
     padding: 80px 0 60px;
@@ -1230,6 +1232,7 @@
   &__inner {
     min-height: 558px;
     position: relative;
+    overflow: hidden;
   }
   &__text {
     padding-top: 170px;
@@ -1238,6 +1241,9 @@
     font-size: 81px;
     line-height: 100%;
     position: relative;
+    span {
+      color: $red;
+    }
     &:after {
       content: "25";
       position: absolute;
@@ -1246,10 +1252,21 @@
       font-weight: 900;
       font-size: 400px;
       line-height: 100%;
+      display: none;
     }
-    span {
-      color: $red;
-    }
+  }
+  &__num {
+    position: absolute;
+    top: -15px;
+    // right: -285px;
+    left: 540px;
+    font-weight: 900;
+    font-size: 400px;
+    line-height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    pointer-events: none;
   }
   &__star {
     position: absolute;
@@ -1645,7 +1662,7 @@
     }
   }
   &__title {
-    max-width: 1090px;
+    max-width: 1100px;
     font-weight: 700;
     font-size: 81px;
     line-height: 110%;
@@ -1661,6 +1678,7 @@
     display: inline-block;
     max-width: none;
     padding: 0 20px;
+    vertical-align: middle;
     &:last-child {
       padding: 0;
     }
@@ -1918,7 +1936,9 @@
 
   &__price {
     text-align: center;
+    overflow: hidden;
   }
+
   &__price-text {
     color: $red;
     font-weight: 900;
@@ -1933,6 +1953,11 @@
       color: $border;
       margin-right: 300px;
     }
+  }
+  &__price-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__price-info {
     max-width: 424px;
@@ -2421,6 +2446,12 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
+    img {
+      display: inline-block;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
   }
   &__subtitle {
     font-weight: 400;
@@ -2439,6 +2470,7 @@
   }
   &__card-img {
     margin-bottom: 20px;
+    border-radius: 35px;
   }
   &__card-title {
     font-size: 42px;
@@ -2447,6 +2479,11 @@
   }
   &__card-info {
   }
+}
+
+.line {
+  display: inline-block !important;
+  width: auto !important;
 }
 
 @import "media";

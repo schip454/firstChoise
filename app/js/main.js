@@ -1,4 +1,6 @@
-// new WOW().init();
+new WOW({
+  mobile: false,
+}).init();
 
 const burger = document.querySelector(".header__hamburger");
 const burgerContent = document.querySelector(".header__content");

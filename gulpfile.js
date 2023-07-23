@@ -39,13 +39,22 @@ function scripts() {
   return (
     src([
       // 'node_modules/jquery/dist/jquery.js',
-      "node_modules/swiper/swiper-bundle.min.js",
       // "app/js/video.js",
       // "app/js/toggleMap.js",
+      // "app/js/wow.min.js",
+
+      // "node_modules/gsap/dist/gsap.min.js",
+      // "node_modules/split-type/dist/index.js",
+      // "app/js/gsap.js",
+
+      "node_modules/swiper/swiper-bundle.min.js",
       "app/js/main.js",
     ])
       // .pipe(concat("video.min.js"))
       // .pipe(concat("toggleMap.min.js"))
+
+      // .pipe(concat("gsap.min.js"))
+
       .pipe(concat("main.min.js"))
       .pipe(uglify())
       .pipe(dest("app/js"))
@@ -75,6 +84,7 @@ function build() {
       "app/js/main.min.js",
       "app/js/toggleMap.min.js",
       "app/js/video.min.js",
+      "app/js/gsap.min.js",
       "app/*.html",
     ],
     { base: "app" }
@@ -89,6 +99,7 @@ function watching() {
       "!app/js/main.min.js",
       "!app/js/toggleMap.min.js",
       "!app/js/video.min.js",
+      "!app/js/gsap.min.js",
     ],
     scripts
   );
