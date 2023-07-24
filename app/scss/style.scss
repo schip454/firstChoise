@@ -276,7 +276,7 @@
     }
   }
   &__image {
-    padding-right: 142px;
+    padding-right: 169px;
     display: inline-block;
   }
   &__text {
@@ -1000,10 +1000,18 @@
     justify-content: space-between;
     align-items: end;
     min-height: 53px;
+    gap: 20px;
+  }
+  &__item-infobox {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    justify-content: space-between;
   }
   &__item-price {
     font-size: 15px;
     line-height: 140%;
+    min-width: 75px;
     span {
       color: $red;
       display: block;
@@ -2276,7 +2284,7 @@
     justify-content: space-between;
     align-items: end;
     max-width: 1180px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
   .video__title {
     max-width: 700px;
@@ -2431,6 +2439,10 @@
 .about {
   margin-bottom: 150px;
   min-height: 492px;
+  background-image: url(../images/about-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   &__inner {
     display: flex;
     gap: 300px;

@@ -1,3 +1,4 @@
+// if (window.innerHeight >= 1200) {
 const myText = new SplitType(".top__title");
 gsap.to(".word", {
   stagger: 0.12,
@@ -44,3 +45,4 @@ gsap.to(".word", {
   },
   // ease:Linear.easeNone
 });
+// }
