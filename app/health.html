@@ -214,9 +214,7 @@
           <div class="video__inner">
             <div class="video__box">
               <div class="video__titlebox">
-                <h2
-                  class="video__title section-title wow animate__fadeIn"
-                  data-wow-duration=".7s">
+                <h2 class="video__title section-title" data-wow-duration=".7s">
                   About our service briefly
                 </h2>
                 <p
@@ -260,15 +258,13 @@
         <div class="container">
           <div class="want__inner">
             <div class="want__wrapper">
-              <h2
-                class="section-title want__title wow animate__fadeIn"
-                data-wow-duration=".7s">
+              <h2 class="section-title want__title" data-wow-duration=".7s">
                 We want to be your <span>1st Choice</span>
               </h2>
               <p
                 class="want__text wow animate__fadeIn hidden"
                 data-wow-duration=".3s"
-                data-wow-delay="1.0s">
+                data-wow-delay=".6s">
                 At First Choice Urgent Care, our board-certified physicians and
                 experienced medical staff offer convenient, reliable and quality
                 services in a friendly, professional environment 365 days/year.
@@ -278,7 +274,7 @@
               <div class="want__card-wrapper">
                 <div
                   class="want__card wow animate__fadeIn hidden"
-                  data-wow-duration=".3s"
+                  data-wow-duration=".8s"
                   data-wow-delay=".4s">
                   <img
                     src="images/slides/want-1.svg"
@@ -296,7 +292,7 @@
                     <p
                       class="want__card-text wow animate__fadeIn hidden"
                       data-wow-duration=".3s"
-                      data-wow-delay="1.0s">
+                      data-wow-delay="1.2s">
                       We received Certified Urgent Care Designation from the
                       Urgent Care Assosication of America
                     </p>
@@ -305,7 +301,7 @@
               </div>
               <div
                 class="want__card wow animate__fadeIn hidden"
-                data-wow-duration=".3s"
+                data-wow-duration=".8s"
                 data-wow-delay=".4s">
                 <img
                   src="images/slides/want-5.svg"
@@ -323,7 +319,7 @@
                   <p
                     class="want__card-text wow animate__fadeIn hidden"
                     data-wow-duration=".3s"
-                    data-wow-delay="1.0s">
+                    data-wow-delay="1.2s">
                     We have great benefit of experience in Occupational Health
                     Services and Care
                   </p>
@@ -331,7 +327,7 @@
               </div>
               <div
                 class="want__card wow animate__fadeIn hidden"
-                data-wow-duration=".3s"
+                data-wow-duration=".8s"
                 data-wow-delay=".4s">
                 <img
                   src="images/slides/want-4.svg"
@@ -534,9 +530,7 @@
       <section class="offers offers--solo">
         <div class="container">
           <div class="offers__box">
-            <h2
-              class="offers__title section-title wow animate__fadeIn"
-              data-wow-duration=".7s">
+            <h2 class="offers__title section-title" data-wow-duration=".7s">
               Special offers
             </h2>
           </div>
@@ -544,20 +538,20 @@
             <div class="offers__card">
               <img
                 class="offers__card-img"
-                src="images/slides/offers-4--big.png"
+                src="images/slides/offers-new.jpg"
                 alt="DOT Exams" />
               <div class="offers__card-wrapper">
                 <h3
                   class="offers__card-title wow animate__fadeIn hidden"
                   data-wow-duration=".7s"
-                  data-wow-delay=".2s">
+                  data-wow-delay=".6s">
                   DOT Exams by a Medical Examiner
                 </h3>
                 <div class="offers__item-box">
                   <button
                     class="offers__card-btn btn wow animate__fadeIn hidden"
                     data-wow-duration=".3s"
-                    data-wow-delay=".2s">
+                    data-wow-delay=".8s">
                     Contact us
                   </button>
                 </div>
@@ -580,7 +574,7 @@
             <div class="video__box video__box--second">
               <div class="video__titlebox">
                 <h2
-                  class="video__title video__title--second section-title wow animate__fadeIn"
+                  class="video__title video__title--second video__title--desc section-title"
                   data-wow-duration=".7s">
                   <span>1st Choice</span> is a part of Occmed connect Network
                 </h2>
@@ -629,7 +623,7 @@
         <div class="container">
           <div class="partners__titlebox">
             <h2
-              class="partners__title section-title wow animate__fadeIn"
+              class="partners__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Partners
@@ -1002,7 +996,26 @@
     </footer>
     <script src="js/wow.min.js"></script>
     <script src="js/gsap.min.js"></script>
-    <script src="js/video.min.js"></script>
+    <script>
+      const intersectionObserver = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0) return;
+
+        titleAnimationFunc(".video__title");
+        titleAnimationFunc(".offers__title");
+        titleAnimationFunc(".want__title");
+        titleAnimationFunc(".video__title--desc");
+        titleAnimationFunc(".services__title", ".char");
+        titleAnimationFunc(".partners__title", ".char");
+      });
+      intersectionObserver.observe(document.querySelector(".video__title"));
+      intersectionObserver.observe(document.querySelector(".offers__title"));
+      intersectionObserver.observe(document.querySelector(".want__title"));
+      intersectionObserver.observe(
+        document.querySelector(".video__title--desc")
+      );
+      intersectionObserver.observe(document.querySelector(".services__title"));
+      intersectionObserver.observe(document.querySelector(".partners__title"));
+    </script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

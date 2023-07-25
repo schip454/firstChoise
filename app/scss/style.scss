@@ -892,6 +892,16 @@
   }
 }
 
+.offers.offers--solo {
+  .offers__card-img {
+    max-width: 600px;
+    max-height: 380px;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+}
+
 .offers {
   background-color: $blue;
   padding: 80px 0;
@@ -1159,7 +1169,7 @@
   background-position: bottom bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/slides/want-bg--2.jpg);
+  background-image: url(../images/slides/want-bg--2.webp);
   .want__inner {
     display: block;
     padding: 80px 0 60px;
@@ -1206,6 +1216,9 @@
     margin-bottom: 12px;
   }
   &__item-text {
+  }
+  &__item-text--second {
+    max-width: 260px;
   }
   &__cards {
     display: flex;

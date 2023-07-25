@@ -183,7 +183,7 @@
             <div class="about__card">
               <img
                 class="about__card-img hidden wow animate__fadeIn"
-                data-wow-duration=".3s"
+                data-wow-duration=".8s"
                 data-wow-delay="1s"
                 src="images/ali.png"
                 alt="Photo Ali Hassan" />
@@ -209,7 +209,7 @@
           <div class="video__inner">
             <div class="video__titlebox">
               <h2
-                class="video__title video__title--second section-title wow animate__fadeIn"
+                class="video__title video__title--second section-title"
                 data-wow-duration=".7s">
                 <span>1st Choice</span> is a part of Occmed connect Network
               </h2>
@@ -268,7 +268,7 @@
         <div class="container">
           <div class="offers__box">
             <h2
-              class="offers__title section-title wow animate__fadeIn"
+              class="offers__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Special offers
@@ -423,7 +423,7 @@
           </div>
           <div class="contact__titlebox">
             <h2
-              class="contact__title section-title wow animate__fadeIn"
+              class="contact__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Contact us
@@ -453,7 +453,6 @@
                 type="text"
                 class="contact__form-input wow animate__fadeIn hidden"
                 data-wow-duration=".3s"
-                data-wow-delay=".1s"
                 placeholder="Name" />
               <input
                 type="text"
@@ -466,18 +465,18 @@
               type="text"
               class="contact__form-input wow animate__fadeIn hidden"
               data-wow-duration=".3s"
-              data-wow-delay=".4s"
+              data-wow-delay=".2s"
               placeholder="Subject" />
             <textarea
               class="contact__form-area wow animate__fadeIn hidden"
               data-wow-duration=".3s"
-              data-wow-delay=".6s"
+              data-wow-delay=".2s"
               placeholder="Your message"></textarea>
             <button
               type="submit"
               class="contact__form-btn btn wow animate__fadeIn hidden"
-              data-wow-duration=".3s"
-              data-wow-delay=".8s">
+              data-wow-duration=".6s"
+              data-wow-delay=".3s">
               Submit
             </button>
           </form>
@@ -683,6 +682,18 @@
     <script src="js/wow.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/video.min.js"></script>
+    <script>
+      const intersectionObserver = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0) return;
+
+        titleAnimationFunc(".video__title");
+        titleAnimationFunc(".offers__title");
+        titleAnimationFunc(".contact__title");
+      });
+      intersectionObserver.observe(document.querySelector(".video__title"));
+      intersectionObserver.observe(document.querySelector(".offers__title"));
+      intersectionObserver.observe(document.querySelector(".contact__title"));
+    </script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

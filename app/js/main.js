@@ -20,15 +20,6 @@ dropdownBtn.addEventListener("click", () => {
   }
 });
 
-// document.querySelector(".menu__list-dropdown").addEventListener("click", () => {
-//   if (
-//     document.querySelector(".menu__dropdown-content").style.maxHeight == "200px"
-//   ) {
-//     document.querySelector(".menu__dropdown-content").style.maxHeight = "0";
-//   } else {
-//     document.querySelector(".menu__dropdown-content").style.maxHeight = "200px";
-//   }
-// });
 
 const swiper = new Swiper(".top__slider", {
   // Optional parameters
@@ -54,12 +45,6 @@ const swiper = new Swiper(".top__slider", {
       pagination: {
         el: ".top__slider-pagination",
         type: "fraction",
-        // formatFractionCurrent: function (number) {
-        //   return "0" + number;
-        // },
-        // formatFractionTotal: function (number) {
-        //   return "0" + number;
-        // },
 
         formatFractionCurrent: addZero,
         formatFractionTotal: addZero,
@@ -199,17 +184,6 @@ const accordionItemHeaders = document.querySelectorAll(
   ".accordion__item-title"
 );
 
-// accordionItemHeaders.forEach((accordionItemHeader) => {
-//   accordionItemHeader.addEventListener("click", (event) => {
-//     accordionItemHeader.classList.toggle("active");
-//     const accordionItemBody = accordionItemHeader.nextElementSibling;
-//     if (accordionItemHeader.classList.contains("active")) {
-//       accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-//     } else {
-//       accordionItemBody.style.maxHeight = 0;
-//     }
-//   });
-// });
 
 for (let i = 0; i < accordionItemHeaders.length; i++) {
   accordionItemHeaders[i].addEventListener("click", function () {
@@ -246,13 +220,9 @@ buttons.forEach((value) => {
     e.preventDefault();
     hiddenCards.forEach((item) => {
       if (item.dataset.card === "hidden") {
-        // item.classList.remove("bounceOut");
         item.classList.add("fadeInUp");
 
-        // setTimeout(() => {
         item.style.display = "flex";
-        // }, 200);
-        // value.textContent = "Скрыть";
         value.remove();
         item.dataset.card = "open";
       }
@@ -260,77 +230,3 @@ buttons.forEach((value) => {
   });
 });
 
-// let widtLogosWrapper = 0;
-// const logosWrapper = document.querySelector(".brands__items-wrapper");
-// console.log(logosWrapper.children);
-// Array.from(logosWrapper.children).forEach(function (el, index) {
-//   widtLogosWrapper += el.offsetWidth;
-// });
-// widtLogosWrapper = widtLogosWrapper * 4;
-// document.querySelector(".brands__items").style.width = widtLogosWrapper + "px";
-
-// const tickerItem = document.querySelectorAll(".brands__item");
-
-// let pagination = document.querySelector(".brands__items");
-// let initialX = 0;
-// let initialY = 0;
-// let moveElem = false;
-
-// let events = {
-//   mouse: {
-//     down: "mousedown",
-//     move: "mousemove",
-//     up: "mouseup",
-//   },
-//   touch: {
-//     down: "touchstart",
-//     move: "touchmove",
-//     up: "touchend",
-//   },
-// };
-
-// let deviceType = "";
-
-// const isTouchDevice = () => {
-//   try {
-//     document.createEvent("TouchEvent");
-//     deviceType = "touch";
-//     return true;
-//   } catch (err) {
-//     deviceType = "mouse";
-//     return false;
-//   }
-// };
-// isTouchDevice();
-
-// pagination.addEventListener(events[deviceType].down, (e) => {
-//   e.preventDefault();
-//   initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-//   initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
-
-//   moveElem = true;
-// });
-
-// pagination.addEventListener(events[deviceType].move, (e) => {
-//   if (moveElem) {
-//     e.preventDefault();
-//     let newX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-//     let newY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
-
-//     pagination.style.left = pagination.offsetLeft - (initialX - newX) + "px";
-
-//     initialX = newX;
-//     initialY = newY;
-//   }
-// });
-
-// pagination.addEventListener(events[deviceType].up, (e) => {
-//   moveElem = false;
-// });
-
-// pagination.addEventListener("mouseleave", (e) => {
-//   moveElem = false;
-// });
-// pagination.addEventListener(events[deviceType].up, (e) => {
-//   moveElem = false;
-// });

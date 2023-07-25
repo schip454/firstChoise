@@ -296,7 +296,6 @@
                 type="text"
                 class="contact__form-input wow animate__fadeIn hidden"
                 data-wow-duration=".3s"
-                data-wow-delay=".1s"
                 placeholder="Name" />
               <input
                 type="text"
@@ -309,18 +308,18 @@
               type="text"
               class="contact__form-input wow animate__fadeIn hidden"
               data-wow-duration=".3s"
-              data-wow-delay=".4s"
+              data-wow-delay=".2s"
               placeholder="Subject" />
             <textarea
               class="contact__form-area wow animate__fadeIn hidden"
               data-wow-duration=".3s"
-              data-wow-delay=".6s"
+              data-wow-delay=".2s"
               placeholder="Your message"></textarea>
             <button
               type="submit"
               class="contact__form-btn btn wow animate__fadeIn hidden"
-              data-wow-duration=".3s"
-              data-wow-delay=".8s">
+              data-wow-duration=".6s"
+              data-wow-delay=".3s">
               Submit
             </button>
           </form>
@@ -672,6 +671,18 @@
     </footer>
     <script src="js/wow.min.js"></script>
     <script src="js/gsap.min.js"></script>
+    <script>
+      const intersectionObserver = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0) return;
+
+        titleAnimationFunc(".faq__title", ".char");
+        titleAnimationFunc(".contact__title");
+        titleAnimationFunc(".offers__title");
+      });
+      intersectionObserver.observe(document.querySelector(".faq__title"));
+      intersectionObserver.observe(document.querySelector(".contact__title"));
+      intersectionObserver.observe(document.querySelector(".offers__title"));
+    </script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

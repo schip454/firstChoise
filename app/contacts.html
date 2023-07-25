@@ -162,7 +162,7 @@
         <div class="container">
           <div class="contact__titlebox">
             <h2
-              class="contact__title section-title wow animate__fadeIn"
+              class="contact__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Contact us
@@ -192,7 +192,6 @@
                 type="text"
                 class="contact__form-input wow animate__fadeIn hidden"
                 data-wow-duration=".3s"
-                data-wow-delay=".1s"
                 placeholder="Name" />
               <input
                 type="text"
@@ -205,18 +204,18 @@
               type="text"
               class="contact__form-input wow animate__fadeIn hidden"
               data-wow-duration=".3s"
-              data-wow-delay=".4s"
+              data-wow-delay=".2s"
               placeholder="Subject" />
             <textarea
               class="contact__form-area wow animate__fadeIn hidden"
               data-wow-duration=".3s"
-              data-wow-delay=".6s"
+              data-wow-delay=".2s"
               placeholder="Your message"></textarea>
             <button
               type="submit"
               class="contact__form-btn btn wow animate__fadeIn hidden"
-              data-wow-duration=".3s"
-              data-wow-delay=".8s">
+              data-wow-duration=".6s"
+              data-wow-delay=".3s">
               Submit
             </button>
           </form>
@@ -227,13 +226,13 @@
         <div class="container">
           <div class="map__box">
             <h2
-              class="map__title section-title wow animate__fadeIn"
+              class="map__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Choose the location you will be visiting
             </h2>
             <label
-              class="map__toggle wow animate__slideInLeft"
+              class="map__toggle wow animate__slideInRight"
               data-wow-duration=".3s"
               data-wow-offset="200">
               <p class="map__toggle-text">Tiles view</p>
@@ -540,7 +539,7 @@
         <div class="container">
           <div class="offers__box">
             <h2
-              class="offers__title section-title wow animate__fadeIn"
+              class="offers__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Special offers
@@ -882,6 +881,18 @@
     <script src="js/wow.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/toggleMap.min.js"></script>
+    <script>
+      const intersectionObserver = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0) return;
+
+        titleAnimationFunc(".contact__title");
+        titleAnimationFunc(".map__title");
+        titleAnimationFunc(".offers__title");
+      });
+      intersectionObserver.observe(document.querySelector(".contact__title"));
+      intersectionObserver.observe(document.querySelector(".map__title"));
+      intersectionObserver.observe(document.querySelector(".offers__title"));
+    </script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

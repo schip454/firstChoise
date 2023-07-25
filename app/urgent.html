@@ -166,11 +166,13 @@
               <img src="images/icon/star.svg" alt="Star Icon" />
               Urgent care
             </p>
-            <h1 class="care__title">
+            <h1
+              class="care__title hidden wow animate__fadeIn"
+              data-wow-duration="1.3s">
               Find your clinic
               <img
                 class="care__title-img wow animate__zoomIn"
-                data-wow-duration=".4s"
+                data-wow-duration=".8s"
                 src="images/hospital.png"
                 alt="Hospital image" />
               to get
@@ -206,13 +208,13 @@
         <div class="container">
           <div class="map__box">
             <h2
-              class="map__title section-title wow animate__fadeIn"
+              class="map__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Choose the location you will be visiting
             </h2>
             <label
-              class="map__toggle wow animate__slideInLeft"
+              class="map__toggle wow animate__slideInRight"
               data-wow-duration=".3s"
               data-wow-offset="200">
               <p class="map__toggle-text">Tiles view</p>
@@ -519,7 +521,7 @@
         <div class="container">
           <div class="offers__box">
             <h2
-              class="offers__title section-title wow animate__fadeIn"
+              class="offers__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Special offers
@@ -616,12 +618,10 @@
                         Starting at
                         <span>$85*</span>
                       </p>
-                      <div class="offers__item-infobox">
-                        <p class="offers__item-info">
-                          Additional charges may apply if testing is needed
-                        </p>
-                        <button class="offers__item-btn">Contact us</button>
-                      </div>
+                      <p class="offers__item-info">
+                        Additional charges may apply if testing is needed
+                      </p>
+                      <button class="offers__item-btn">Contact us</button>
                     </div>
                   </div>
                 </a>
@@ -669,7 +669,7 @@
           <div class="want__inner">
             <div class="want__wrapper">
               <h2
-                class="section-title want__title wow animate__fadeIn"
+                class="section-title want__title"
                 data-wow-duration=".7s"
                 data-wow-offset="200">
                 We want to be your <span>1st Choice</span>
@@ -772,7 +772,7 @@
         <div class="container">
           <div class="services__box">
             <h2
-              class="services__title section-title wow animate__fadeIn"
+              class="services__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Services
@@ -997,7 +997,7 @@
           <div class="reviews__inner">
             <div class="reviews__wrapper">
               <h2
-                class="reviews__title section-title wow animate__fadeIn"
+                class="reviews__title section-title"
                 data-wow-duration=".7s"
                 data-wow-offset="200">
                 Patients <span>warm</span> reviews
@@ -1168,7 +1168,7 @@
         <div class="container">
           <div class="insurance__titlebox">
             <h2
-              class="insurance__title section-title wow animate__fadeIn"
+              class="insurance__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Insurance
@@ -1519,7 +1519,7 @@
             data-wow-offset="200"
             style="background-image: url(images/slides/visit-bg.png)">
             <h2
-              class="section-title visit__title wow animate__fadeIn"
+              class="section-title visit__title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Visit your doctor with comfort
@@ -1544,15 +1544,13 @@
               <a
                 href="#"
                 class="visit__btn wow animate__fadeIn"
-                data-wow-duration="1.2s"
-                data-wow-offset="200"
+                data-wow-duration=".6s"
                 >Save my spot</a
               >
               <a
                 href="#"
                 class="visit__btn visit__btn-another wow animate__fadeIn"
-                data-wow-duration="1.6s"
-                data-wow-offset="200"
+                data-wow-duration="1s"
                 >Virtual visit</a
               >
             </div>
@@ -1564,7 +1562,7 @@
         <div class="container">
           <div class="faq__inner">
             <h2
-              class="faq__title section-title wow animate__fadeIn"
+              class="faq__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               F.A.Q.
@@ -1669,7 +1667,7 @@
         <div class="container">
           <div class="contact__titlebox">
             <h2
-              class="contact__title section-title wow animate__fadeIn"
+              class="contact__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Contact us
@@ -1699,7 +1697,6 @@
                 type="text"
                 class="contact__form-input wow animate__fadeIn hidden"
                 data-wow-duration=".3s"
-                data-wow-delay=".1s"
                 placeholder="Name" />
               <input
                 type="text"
@@ -1712,18 +1709,18 @@
               type="text"
               class="contact__form-input wow animate__fadeIn hidden"
               data-wow-duration=".3s"
-              data-wow-delay=".4s"
+              data-wow-delay=".2s"
               placeholder="Subject" />
             <textarea
               class="contact__form-area wow animate__fadeIn hidden"
               data-wow-duration=".3s"
-              data-wow-delay=".6s"
+              data-wow-delay=".2s"
               placeholder="Your message"></textarea>
             <button
               type="submit"
               class="contact__form-btn btn wow animate__fadeIn hidden"
-              data-wow-duration=".3s"
-              data-wow-delay=".8s">
+              data-wow-duration=".6s"
+              data-wow-delay=".3s">
               Submit
             </button>
           </form>
@@ -1929,6 +1926,30 @@
     <script src="js/wow.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/toggleMap.min.js"></script>
+    <script>
+      const intersectionObserver = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0) return;
+
+        titleAnimationFunc(".map__title");
+        titleAnimationFunc(".offers__title");
+        titleAnimationFunc(".want__title");
+        titleAnimationFunc(".services__title", ".char");
+        titleAnimationFunc(".visit__title");
+        titleAnimationFunc(".insurance__title", ".char");
+        titleAnimationFunc(".reviews__title");
+        titleAnimationFunc(".faq__title", ".char");
+        titleAnimationFunc(".contact__title");
+      });
+      intersectionObserver.observe(document.querySelector(".map__title"));
+      intersectionObserver.observe(document.querySelector(".offers__title"));
+      intersectionObserver.observe(document.querySelector(".want__title"));
+      intersectionObserver.observe(document.querySelector(".services__title"));
+      intersectionObserver.observe(document.querySelector(".reviews__title"));
+      intersectionObserver.observe(document.querySelector(".insurance__title"));
+      intersectionObserver.observe(document.querySelector(".visit__title"));
+      intersectionObserver.observe(document.querySelector(".faq__title"));
+      intersectionObserver.observe(document.querySelector(".contact__title"));
+    </script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

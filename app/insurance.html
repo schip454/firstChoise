@@ -161,7 +161,7 @@
         <div class="container">
           <div class="insurance__titlebox">
             <h2
-              class="insurance__title section-title wow animate__fadeIn"
+              class="insurance__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               We accept most major insurance carriers and uninsured persons
@@ -577,7 +577,7 @@
         <div class="container">
           <div class="offers__box">
             <h2
-              class="offers__title section-title wow animate__fadeIn"
+              class="offers__title section-title"
               data-wow-duration=".7s"
               data-wow-offset="200">
               Special offers
@@ -918,6 +918,16 @@
     </footer>
     <script src="js/wow.min.js"></script>
     <script src="js/gsap.min.js"></script>
+    <script>
+      const intersectionObserver = new IntersectionObserver((entries) => {
+        if (entries[0].intersectionRatio <= 0) return;
+
+        titleAnimationFunc(".insurance__title ");
+        titleAnimationFunc(".offers__title");
+      });
+      intersectionObserver.observe(document.querySelector(".insurance__title"));
+      intersectionObserver.observe(document.querySelector(".offers__title"));
+    </script>
     <script src="js/main.min.js"></script>
   </body>
 </html>
