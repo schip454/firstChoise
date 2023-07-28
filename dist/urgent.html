@@ -1927,6 +1927,24 @@
     <script src="js/gsap.min.js"></script>
     <script src="js/toggleMap.min.js"></script>
     <script>
+      const mySecondText = new SplitType(".care__title");
+      const careTitle = document.querySelector(".care__title");
+      gsap.to(".word", {
+        stagger: 0.12,
+        duration: 1.3,
+        onStart: function () {
+          careTitle.querySelectorAll(".word").forEach((word) => {
+            word.classList.add("wow");
+            word.classList.add("hidden");
+            word.dataset.wowDelay = "1.7s";
+          });
+        },
+        keyframes: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      });
+
       const intersectionObserver = new IntersectionObserver((entries) => {
         if (entries[0].intersectionRatio <= 0) return;
 
