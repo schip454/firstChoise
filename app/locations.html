@@ -183,9 +183,12 @@
           <div class="map__inner animate__animated animate__fadeIn">
             <div
               class="map__items wow animate__slideInLeft"
+              id="controls"
               data-wow-duration="1s"
               data-wow-offset="200">
-              <div class="map__item">
+              <!-- <div id="controls"></div> -->
+              <!-- 
+              <div class="map__item map__item--1" >
                 <h5 class="map__item-title">DEARBORN WEST</h5>
                 <p class="map__item-adress">
                   23455 MICHIGAN AVE DEARBORN, MI 48124
@@ -205,7 +208,7 @@
                 </div>
                 <button class="map__item-btn">Save my spot</button>
               </div>
-              <div class="map__item">
+              <div class="map__item map__item--2">
                 <h5 class="map__item-title">Livonia</h5>
                 <p class="map__item-adress">
                   11502 MIDDLEBELT ROAD LIVONIA, MI 48150
@@ -225,7 +228,7 @@
                 </div>
                 <button class="map__item-btn">Save my spot</button>
               </div>
-              <div class="map__item">
+              <div class="map__item map__item--3">
                 <h5 class="map__item-title">Taylor</h5>
                 <p class="map__item-adress">
                   10155 TELEGRAPH RD TAYLOR, MI 48180
@@ -245,7 +248,7 @@
                 </div>
                 <button class="map__item-btn">Save my spot</button>
               </div>
-              <div class="map__item">
+              <div class="map__item map__item--4">
                 <h5 class="map__item-title">Dearborn East</h5>
                 <p class="map__item-adress">12841 FORD RD DEARBORN, MI 48126</p>
                 <div class="map__item-box">
@@ -259,7 +262,7 @@
                 </div>
                 <button class="map__item-btn">Save my spot</button>
               </div>
-              <div class="map__item">
+              <div class="map__item map__item--5">
                 <h5 class="map__item-title">bloomfield</h5>
                 <p class="map__item-adress">
                   2274 S TELEGRAPH ROAD BLOOMFIELD, MI 48302
@@ -279,7 +282,7 @@
                 </div>
                 <button class="map__item-btn">Save my spot</button>
               </div>
-              <div class="map__item">
+              <div class="map__item map__item--6">
                 <h5 class="map__item-title">southfield</h5>
                 <p class="map__item-adress">
                   29628 SOUTHFIELD ROAD SOUTHFIELD, MI 48076
@@ -299,7 +302,7 @@
                 </div>
                 <button class="map__item-btn">Save my spot</button>
               </div>
-              <div class="map__item">
+              <div class="map__item map__item--7">
                 <h5 class="map__item-title">Garden city</h5>
                 <p class="map__item-adress">
                   31450 FORD RD GARDEN CITY, MI 48135
@@ -318,22 +321,12 @@
                   >
                 </div>
                 <button class="map__item-btn">Save my spot</button>
-              </div>
+              </div> -->
             </div>
             <div
               class="map__content wow animate__slideInRight"
               data-wow-duration="1s"
-              data-wow-offset="200">
-              <iframe
-                class="map__iframe"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23598.17901400108!2d-83.1767458318728!3d42.32605349774518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b35931760faab%3A0x61240455f966a49a!2s1st%20Choice%20Urgent%20Care%20of%20Dearborn%20EAST!5e0!3m2!1sru!2sru!4v1686398208529!5m2!1sru!2sru"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+              data-wow-offset="200"></div>
           </div>
           <div class="map__cards-wrapper">
             <div class="map__cards none animate__animated animate__fadeIn">
@@ -815,6 +808,9 @@
     </footer>
     <script src="js/wow.min.js"></script>
     <script src="js/gsap.min.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArv5lUHhAy-NZ6yd4OcAE_OVwgIerW87Y&callback=initMap&v=weekly"
+      defer></script>
     <script src="js/toggleMap.min.js"></script>
     <script>
       const intersectionObserver = new IntersectionObserver((entries) => {
