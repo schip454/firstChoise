@@ -31,6 +31,37 @@ function initMap() {
 
   const markers = [
     {
+      name: "DEARBORN EAST",
+      coordinates: { lat: 42.32937404396069, lng: -83.16846993179551 },
+      info: `
+      <div class="map__popup map__popup--4">
+      <div class="map__popup-inner">
+        <h5 class="map__popup-title">DEARBORN EAST</h5>
+        <p class="map__popup-adress">
+           12841 FORD RD DEARBORN, MI 48126
+        </p>
+        <a href="tel:3137104199" class="map__popup-number"
+          >(313) 710-4199</a
+        >
+        </div>
+        <p class="map__popup-work">24HRS A DAY <br> 365 DAYS A YEAR</p>
+        <button class="map__item-btn map__popup-btn">Save my spot</button>
+      </div>
+      `,
+      image: "../images/pin.svg",
+      activeImage: "../images/redpin.svg",
+      adress: "12841 FORD RD DEARBORN, MI 48126",
+      tel: "(313) 710-4199",
+      telForHref: "3137104199",
+      workTime: `
+      <div class="map__item-box">
+          <div class="map__item-work">
+          <p>24HRS A DAY</p>
+          <p>365 DAYS A YEAR</p>
+          </div>
+      </div>`,
+    },
+    {
       name: "DEARBORN WEST",
       coordinates: { lat: 42.30131361665214, lng: -83.26433857597175 },
       info: ` 
@@ -134,39 +165,6 @@ function initMap() {
       adress: "10155 TELEGRAPH RD TAYLOR, MI 48180",
       tel: "(734) 718-1969",
       telForHref: "7347181969",
-      workTime: `
-      <div class="map__item-worktime">
-      <div class="map__item-time">
-        9AM–5PM<span>Mon–Fri </span>
-      </div>
-      <div class="map__item-time">
-        CLOSED <span>Saturday–Sunday</span>
-      </div>
-    </div>`,
-    },
-    {
-      name: "DEARBORN EAST",
-      coordinates: { lat: 42.32937404396069, lng: -83.16846993179551 },
-      info: `
-      <div class="map__popup map__popup--4">
-      <div class="map__popup-inner">
-        <h5 class="map__popup-title">DEARBORN EAST</h5>
-        <p class="map__popup-adress">
-           12841 FORD RD DEARBORN, MI 48126
-        </p>
-        <a href="tel:3137104199" class="map__popup-number"
-          >(313) 710-4199</a
-        >
-        </div>
-        <p class="map__popup-work">24HRS A DAY <br> 365 DAYS A YEAR</p>
-        <button class="map__item-btn map__popup-btn">Save my spot</button>
-      </div>
-      `,
-      image: "../images/pin.svg",
-      activeImage: "../images/redpin.svg",
-      adress: "12841 FORD RD DEARBORN, MI 48126",
-      tel: "(313) 710-4199",
-      telForHref: "3137104199",
       workTime: `
       <div class="map__item-worktime">
       <div class="map__item-time">
