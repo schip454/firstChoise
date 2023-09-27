@@ -2185,13 +2185,26 @@
 .health {
   margin-bottom: 150px;
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 60px;
     margin-bottom: 65px;
+    height: 640px; 
+    flex-direction: column;
+    color: $white;
+    background-size: cover;
+    padding: 45px 80px ;
+    .breadcrumbs__list{
+      margin-top: 0;
+    }
+    .breadcrumbs__item-current{
+    color: $white;
+    }
   }
   &__titlebox {
+    margin-bottom: 50px;
+  }
+  &__content{
+    width: 100%;
+    max-width: 1460px;
+    margin: 0 auto;
   }
   &__suptitle {
     display: flex;
@@ -2209,13 +2222,21 @@
     line-height: 110%;
   }
   &__box {
-    max-width: 470px;
+    max-width: 926px;
+    display: flex;  
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: rgba($white, 0.30);
+    box-shadow: 2px 2px 10px 0px rgba($black, 0.10);
+    backdrop-filter: blur(7px);
+    padding: 30px;
   }
   &__text {
     font-weight: 500;
     font-size: 25px;
     line-height: 135%;
-    margin-bottom: 20px;
   }
   &__btn {
     width: 100%;
@@ -2655,5 +2676,200 @@
 .map__popup-worktime {
   width: 100%;
 }
+
+.weight {
+  margin-top: 65px;
+  margin-bottom: 160px;
+  &__inner {
+    margin-bottom: 160px;
+  }
+  &__titlebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-size: 81px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 89.1px */
+    letter-spacing: -1.62px;
+    max-width: 600px;
+    span{
+      color: $red;
+    }
+  }
+  &__ico {
+    padding-right: 50px;
+    img{
+      animation: rotate 8s infinite linear;
+    }
+  }
+  &__text {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%; /* 33.75px */
+    letter-spacing: -0.75px;
+    max-width: 372px;
+    span{
+      color: $red;
+    }
+  }
+  &__reviews {
+    margin-bottom: 160px;
+  }
+  &__reviews-box {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);  
+    max-width: 950px;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  &__reviews-question {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 135%; /* 33.75px */
+    letter-spacing: -0.75px;
+  }
+  &__reviews-answer {
+    font-size: 19px;
+    line-height: 140%; /* 26.6px */
+    letter-spacing: -0.19px;
+  }
+  &__reviews-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+  }
+  &__reviews-item {
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 7px 0px rgba($black, 0.10);
+    max-width: 466px;
+    width: 100%;
+    height: 460px;
+
+  }
+  &__reviews-img {
+    margin-bottom: 10px;
+    border-radius: 20px;
+    object-fit: cover;
+    height: 399px;
+    object-position: left;
+  }
+  &__reviews-text {
+    font-size: 15px;
+    line-height: 140%; 
+  }
+		&__easy {
+      margin-bottom: 160px;
+		}
+		&__easy-title {
+      font-size: 54px;
+      font-weight: 700;
+      line-height: 110%; /* 59.4px */
+      letter-spacing: -1.08px;
+      margin-bottom: 50px;
+		}
+		&__easy-items {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+		}
+		&__easy-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+		}
+    &__easy-box{
+      max-width: 355px;
+    }
+		&__easy-img {
+		}
+		&__easy-itemtitle {
+      font-size: 25px;
+    font-weight: 600;
+    line-height: 115%; /* 28.75px */
+    letter-spacing: -0.75px;
+    margin-bottom: 12px;
+		}
+		&__easy-text {
+		}
+    &__card{
+      margin-bottom: 160px;
+    }
+    .announcements__item-image{
+      order: 2;
+    }
+    .announcements__item{
+      cursor: default;
+    }
+      &__call {
+        display: flex;
+        justify-content: space-between;
+        .care__btn{
+          margin-bottom: 0;
+          text-align: center;
+          max-width: 328px;
+        }
+      }
+      &__call-text {
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 115%; /* 28.75px */
+        letter-spacing: -0.75px;
+        max-width: 466px;
+      }
+      &__call-buttons {
+        display: flex;
+        gap: 10px;
+        max-width: 670px;
+        width: 100%;
+      }
+
+  
+}
+
+.review {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+  }
+  &__item-title {
+    font-size: 25px;
+  font-weight: 500;
+  line-height: 135%; /* 33.75px */
+  }
+  &__item-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: "";
+      background-image: url(../images/icon/quote.svg);
+      background-size: cover;
+      width: 94px;
+      height: 77px;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  &__item-author {
+  }
+}
+
 
 @import "media";
