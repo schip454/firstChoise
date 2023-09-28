@@ -68,7 +68,7 @@
     // gap: 20px;
     // max-width: 840px;
   }
-  .health__titlebox{
+  .health__titlebox {
     margin-bottom: 30px;
   }
   .health__btn {
@@ -77,7 +77,7 @@
     height: 60px;
   }
   .health__title {
-    max-width: none;
+    // max-width: none;
   }
   .health__inner {
     gap: 30px;
@@ -441,7 +441,7 @@
     letter-spacing: -0.9px;
     max-width: 510px;
   }
-  .health__suptitle{
+  .health__suptitle {
     margin-bottom: 15px;
   }
   .health__inner {
@@ -452,7 +452,7 @@
     background-position: center;
   }
 
-  .health__box{
+  .health__box {
     justify-content: space-between;
     max-width: 840px;
   }
@@ -889,23 +889,23 @@
     max-width: 470px;
     max-height: 240px;
   }
-  .weight__title{
+  .weight__title {
     font-size: 45px;
     font-weight: 700;
     line-height: 110%;
     letter-spacing: -0.9px;
     max-width: 350px;
   }
-  .weight__text{
+  .weight__text {
     font-size: 22px;
     letter-spacing: -0.66px;
   }
-  .weight__titlebox{
+  .weight__titlebox {
     margin-bottom: 22px;
   }
-  .weight__ico{
+  .weight__ico {
     padding-right: 35px;
-    img{
+    img {
       width: 40px;
       height: 40px;
     }
@@ -914,37 +914,35 @@
   .weight__inner,
   .weight__reviews,
   .weight__easy,
-  .weight__card{
+  .weight__card {
     margin-bottom: 100px;
   }
   .weight__reviews-question,
-  .weight__call-text{
+  .weight__call-text {
     font-size: 22px;
   }
-  .weight__reviews-answer{
+  .weight__reviews-answer {
     font-size: 15px;
   }
-  .weight__reviews-item{
+  .weight__reviews-item {
     height: 376px;
   }
-  .weight__reviews-img{
+  .weight__reviews-img {
     height: 315px;
   }
-  .weight__easy-title{
+  .weight__easy-title {
     font-size: 40px;
     margin-bottom: 35px;
   }
-  .weight__easy-text{
+  .weight__easy-text {
     font-size: 15px;
   }
-  .weight__call .care__btn{
+  .weight__call .care__btn {
     max-width: 203px;
   }
-  .weight__call-buttons{
+  .weight__call-buttons {
     max-width: 420px;
   }
-
-
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1739,10 +1737,9 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-  .health__inner{
+  .health__inner {
     height: 440px;
   }
-
 }
 
 @media only screen and (max-width: 992px) {
@@ -2441,8 +2438,8 @@
   .want__item-text--second {
     max-width: 205px;
   }
-  .weight__card{
-    .announcements__item{
+  .weight__card {
+    .announcements__item {
       width: 100%;
       max-width: none;
     }
@@ -2473,8 +2470,8 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  .health__content{
-    display: flex;  
+  .health__content {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -2487,7 +2484,7 @@
     gap: 30px;
     text-align: center;
   }
-  .health__suptitle{
+  .health__suptitle {
     margin-bottom: 10px;
   }
   .health__btn {
@@ -2549,35 +2546,35 @@
   //   flex-direction: column;
   //   display: flex;
   // }
-  .weight__easy-items{
+  .weight__easy-items {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .weight__easy-box{
+  .weight__easy-box {
     max-width: none;
   }
-  .weight__easy-item{
+  .weight__easy-item {
     align-items: flex-start;
   }
-  .weight__reviews-items{
+  .weight__reviews-items {
     flex-wrap: wrap;
   }
 
-  .review__item-box{
+  .review__item-box {
     align-items: flex-start;
   }
-  .weight__reviews-item{
-    max-width: 48%
+  .weight__reviews-item {
+    max-width: 48%;
   }
-  .review__item{
+  .review__item {
     max-width: none;
     width: 100%;
   }
-  .weight__reviews-items{
+  .weight__reviews-items {
     justify-content: start;
   }
-  .weight__reviews-img{
+  .weight__reviews-img {
     width: 100%;
   }
 }
@@ -2627,40 +2624,40 @@
   .partners__item::before {
     width: 223px;
   }
-  .weight__call{
+  .weight__call {
     flex-direction: column;
     gap: 22px;
   }
-  .weight__call-text{
+  .weight__call-text {
     max-width: none;
   }
-  .weight__call-buttons{
+  .weight__call-buttons {
     max-width: none;
     width: 100%;
   }
-  .weight__call .care__btn{
+  .weight__call .care__btn {
     max-width: none;
   }
-  .weight__reviews-box{
+  .weight__reviews-box {
     display: flex;
     flex-direction: column;
   }
-  .weight__title{
+  .weight__title {
     font-size: 40px;
   }
-  .weight__ico{
+  .weight__ico {
     padding-right: 25px;
   }
-  .weight__ico img{
+  .weight__ico img {
     width: 30px;
     height: 30px;
   }
-  .weight__text{
+  .weight__text {
     font-size: 15px;
     max-width: 230px;
   }
-  .weight__image{
-    img{
+  .weight__image {
+    img {
       border-radius: 25px;
       height: 400px;
       object-fit: cover;
@@ -3302,15 +3299,15 @@
     max-width: 340px;
     text-align: center;
   }
-  .health__inner{
+  .health__inner {
     height: 411px;
     padding: 40px;
   }
-  .health__box{
+  .health__box {
     gap: 20px;
     padding: 20px 30px;
   }
-  .health__titlebox{
+  .health__titlebox {
     margin-bottom: 15px;
   }
   .health__image-img {
@@ -3621,51 +3618,53 @@
   .top__image {
     padding-right: 46px;
   }
-  .weight__title{
+  .weight__title {
     font-size: 30px;
   }
-  .weight__ico{
+  .weight__ico {
     padding-right: 20px;
-    img{
+    img {
       width: 25px;
       height: 25px;
     }
   }
-  .weight, .weight__inner, .weight__reviews, .weight__easy, .weight__card{
+  .weight,
+  .weight__inner,
+  .weight__reviews,
+  .weight__easy,
+  .weight__card {
     margin-bottom: 80px;
   }
-  .weight__image img{
+  .weight__image img {
     height: 290px;
   }
-  .weight__reviews-item{
+  .weight__reviews-item {
     height: 263px;
   }
-  .weight__reviews-img{
+  .weight__reviews-img {
     height: 202px;
   }
-  .weight__easy-title{
+  .weight__easy-title {
     font-size: 24px;
     margin-bottom: 30px;
   }
-  .weight__easy-img{
+  .weight__easy-img {
     width: 60px;
     height: 60px;
   }
-  .weight__easy-itemtitle{
+  .weight__easy-itemtitle {
     font-size: 20px;
     margin-bottom: 8px;
   }
-  .weight__easy-text{
+  .weight__easy-text {
     line-height: 140%;
   }
-  .weight__reviews-item{
+  .weight__reviews-item {
     max-width: 47%;
   }
-  .review__item{
+  .review__item {
     max-width: none;
   }
- 
-  
 }
 
 @media only screen and (max-width: 540px) {
@@ -3708,11 +3707,10 @@
   .services__inner {
     gap: 22px;
   }
-  .weight__text{
+  .weight__text {
     max-width: 130px;
     font-size: 12px;
   }
-
 }
 
 /* Extra Small Devices, Phones */
@@ -4357,31 +4355,31 @@
   .offers--solo .offers__card-wrapper {
     max-width: 300px;
   }
-  .weight .announcements__item-image{
+  .weight .announcements__item-image {
     order: 0;
   }
-  .weight .announcements__item{
+  .weight .announcements__item {
     height: 375px;
   }
-  .weight__reviews-item{
+  .weight__reviews-item {
     max-width: none;
     height: 337px;
   }
-  .weight__reviews-img{
+  .weight__reviews-img {
     height: 276px;
   }
-  .weight__call-buttons{
+  .weight__call-buttons {
     flex-direction: column;
   }
-.weight__titlebox{
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 10px;
-}
-.weight__text{
-  max-width: 180px;
-}
+  .weight__titlebox {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+  }
+  .weight__text {
+    max-width: 180px;
+  }
 }
 /**/
 
@@ -4435,13 +4433,12 @@
       margin-bottom: 19px;
     }
   }
-  .health__inner{
+  .health__inner {
     height: 465px;
   }
-  .health__title{
+  .health__title {
     max-width: 300px;
   }
- 
 }
 
 @media only screen and (max-width: 415px) {
@@ -4454,10 +4451,10 @@
   .top__info-text {
     min-height: 63px;
   }
-.health__inner{
-  padding-left: 10px;
-  padding-right: 10px;
-}
+  .health__inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .offers__items {
     gap: 0;
   }
@@ -4517,7 +4514,7 @@
     width: 94%;
     margin-bottom: 7px;
   }
-  .weight__image img{
+  .weight__image img {
     height: 190px;
   }
 }
