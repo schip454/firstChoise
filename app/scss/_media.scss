@@ -943,6 +943,36 @@
   .weight__call-buttons {
     max-width: 420px;
   }
+  .revive__top-title {
+    font-size: 45px;
+    line-height: 110%; /* 49.5px */
+    letter-spacing: -0.9px;
+    margin-bottom: 30px;
+    max-width: 620px;
+  }
+  .revive__top-logo {
+    width: 170px;
+    height: 50px;
+  }
+  .revive__top-box {
+    max-width: 737px;
+  }
+  .revive__top-text {
+    font-size: 19px;
+    line-height: 135%; /* 25.65px */
+    letter-spacing: -0.57px;
+  }
+  .revive__top {
+    height: 520px;
+  }
+  .revive__top-content {
+    margin-top: 80px;
+  }
+  .revive,
+  .revive__top,
+  .revive__items {
+    margin-bottom: 100px;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1048,6 +1078,23 @@
     font-size: 19px;
     max-width: 479px;
     margin-bottom: 10px;
+  }
+  .revive__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .revive__item-img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .resources__item {
+    flex-direction: column;
+  }
+  .resources__list {
+    max-width: none;
+  }
+  .resources,
+  .resources__items {
+    margin-bottom: 100px;
   }
 }
 /**/
@@ -1739,6 +1786,22 @@
   }
   .health__inner {
     height: 440px;
+  }
+  .revive__top-content {
+    margin-top: 0;
+    padding-top: 80px;
+  }
+  .revive__top {
+    height: 428px;
+  }
+  .resources {
+    margin-top: 50px;
+  }
+  .resources__title {
+    font-size: 40px;
+    line-height: 110%; /* 44px */
+    letter-spacing: -0.8px;
+    margin-bottom: 50px;
   }
 }
 
@@ -2764,6 +2827,30 @@
   .contact__form {
     gap: 10px;
   }
+  .resources__list-box {
+    max-width: 215px;
+    .resources__list-prompt {
+      display: none;
+    }
+  }
+  .resources__list-titlebox {
+    .resources__list-prompt {
+      display: block;
+      font-size: 15px;
+      line-height: 140%; /* 21px */
+    }
+  }
+  .resources__list-title,
+  .resources__item-title {
+    font-size: 20px;
+    line-height: 135%; /* 27px */
+    letter-spacing: -0.6px;
+  }
+  .resources__title {
+    font-size: 32px;
+    line-height: 110%; /* 35.2px */
+    letter-spacing: -0.64px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2791,6 +2878,25 @@
   }
   .services__box {
     justify-content: start;
+  }
+  .revive__top-title {
+    font-size: 40px;
+    letter-spacing: -0.8px;
+    max-width: 540px;
+  }
+  .revive__top-logo {
+    width: 150px;
+    height: 44px;
+    margin-right: 10px;
+  }
+  .revive__top-box {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+    max-width: 570px;
+  }
+  .revive__top-btn {
+    max-width: none;
   }
 }
 /**/
@@ -3679,6 +3785,32 @@
   .services__subtitle {
     margin-bottom: 15px;
   }
+  .revive,
+  .revive__top,
+  .revive__items {
+    margin-bottom: 80px;
+  }
+  .revive__top-title {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+    max-width: 410px;
+  }
+  .revive__top-logo {
+    width: 114px;
+    height: 30px;
+  }
+  .revive__top-box {
+    padding: 20px;
+    max-width: 320px;
+  }
+  .revive__top-text {
+    font-size: 15px;
+    line-height: 135%; /* 20.25px */
+    letter-spacing: -0.45px;
+  }
+  .revive__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media only screen and (max-width: 520px) {
@@ -3710,6 +3842,29 @@
   .weight__text {
     max-width: 130px;
     font-size: 12px;
+  }
+
+  .resources__list-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .resources__title {
+    text-align: center;
+    width: 100%;
+  }
+  .resources__item {
+    text-align: center;
+  }
+  .resources__item-box {
+    max-width: none;
+  }
+  .resources__list-btn,
+  .resources__list-box {
+    max-width: 300px;
+  }
+  .resources,
+  .resources__items {
+    margin-bottom: 80px;
   }
 }
 
@@ -4439,8 +4594,34 @@
   .health__title {
     max-width: 300px;
   }
+  .resources__list-title,
+  .resources__item-title {
+    font-size: 18px;
+  }
+  .resources__title {
+    margin-bottom: 40px;
+    font-size: 24px;
+    letter-spacing: -0.48px;
+  }
 }
 
+@media only screen and (max-width: 420px) {
+  .revive__top-title {
+    max-width: 300px;
+    text-align: center;
+  }
+  .revive__top-logo {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .revive__top {
+    height: 454px;
+  }
+  .revive__top-content {
+    padding-top: 40px;
+  }
+}
 @media only screen and (max-width: 415px) {
   .top__info-text {
     padding: 0 10px;
