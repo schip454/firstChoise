@@ -1,6 +1,17 @@
-new WOW({
-  mobile: false,
-}).init();
+// new WOW({
+//   mobile: false,
+// }).init();
+
+window.addEventListener("DOMContentLoaded", function () {
+  new WOW({
+    mobile: false,
+  }).init();
+
+  const hiddenContent = document.querySelectorAll(".loading");
+  hiddenContent.forEach(function (element) {
+    element.classList.remove("loading");
+  });
+});
 
 const burger = document.querySelector(".header__hamburger");
 const burgerContent = document.querySelector(".header__content");
@@ -21,11 +32,9 @@ dropdownBtn.addEventListener("click", () => {
 });
 
 const swiper = new Swiper(".top__slider", {
-  // Optional parameters
   loop: true,
   effect: "fade",
 
-  // Navigation arrows
   navigation: {
     nextEl: ".top__slider-next",
     prevEl: ".top__slider-prev",
@@ -73,8 +82,20 @@ function addZero(num) {
 
 const swiperInfo = new Swiper(".top__info-slider", {
   loop: true,
-  effect: "fade",
   slidesPerView: 1,
+
+  breakpoints: {
+    320: {
+      allowTouchMove: true,
+    },
+    1025: {
+      allowTouchMove: false,
+    },
+  },
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
 });
 
 swiperInfo.controller.control = swiper;

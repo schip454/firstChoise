@@ -30,6 +30,10 @@ body {
   }
 }
 
+.loading {
+  display: none;
+}
+
 .hidden {
   opacity: 0;
   animation: hidden;

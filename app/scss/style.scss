@@ -276,7 +276,7 @@
     }
   }
   &__image {
-    padding-right: 169px;
+    padding-right: 140px;
     display: inline-block;
   }
   &__text {
@@ -290,6 +290,12 @@
   }
   &__slider {
     position: relative;
+    .swiper-slide {
+      margin-right: 20px;
+    }
+    .top__slider-wrapper {
+      overflow: hidden;
+    }
   }
   &__slider-img {
     border-radius: 30px;
@@ -346,9 +352,13 @@
   }
   &__slider-controls {
     position: absolute;
-    right: 25px;
-    bottom: 25px;
+    // right: 25px;
+    // bottom: 25px;
+    bottom: -115px;
+    left: 381px;
     z-index: 5;
+    background-color: $white;
+    padding-right: 30px;
   }
   &__slider-pagination {
     display: flex;
@@ -1111,7 +1121,7 @@
   }
 }
 
-.compitences {
+.competencies {
   margin-bottom: 150px;
   &__inner {
     display: flex;

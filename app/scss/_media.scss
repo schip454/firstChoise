@@ -27,24 +27,24 @@
   .announcements__cards--second {
     flex-wrap: wrap;
   }
-  .compitences__wrapper {
+  .competencies__wrapper {
     max-width: 480px;
   }
-  .compitences__title {
+  .competencies__title {
     font-size: 40px;
     line-height: 110%;
     margin-bottom: 25px;
   }
-  .compitences__text {
+  .competencies__text {
     font-size: 30px;
   }
-  .compitences__items {
+  .competencies__items {
     gap: 14px;
   }
-  .compitences__inner {
+  .competencies__inner {
     gap: 5px;
   }
-  .compitences__item {
+  .competencies__item {
     max-width: 370px;
   }
 
@@ -103,7 +103,10 @@
     font-size: 67px;
   }
   .top__image {
-    padding-right: 129px;
+    padding-right: 90px;
+  }
+  .top__title {
+    font-size: 63px;
   }
 }
 
@@ -161,29 +164,29 @@
     display: none;
   }
 
-  .compitences__items {
+  .competencies__items {
     gap: 22px;
   }
-  .compitences__inner {
+  .competencies__inner {
     gap: 40px;
     flex-direction: column;
   }
-  .compitences__item {
+  .competencies__item {
     max-width: 375px;
   }
-  .compitences__wrapper {
+  .competencies__wrapper {
     order: -1;
     display: flex;
     max-width: none;
     justify-content: space-between;
   }
-  .compitences__text {
+  .competencies__text {
     font-size: 19px;
     line-height: 140%;
     font-weight: 400;
     max-width: 480px;
   }
-  .compitences__items {
+  .competencies__items {
     max-width: none;
   }
 
@@ -1362,7 +1365,7 @@
     padding-bottom: 100px;
   }
   .offers,
-  .compitences,
+  .competencies,
   .want,
   .experience,
   .tests,
@@ -1628,15 +1631,21 @@
     max-width: 270px;
   }
   .top__slider-controls {
-    left: 50%;
-    transform: translateX(-50%);
-    right: auto;
-    bottom: 10px;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // right: auto;
+    // bottom: 10px;
+    padding-right: 0;
+    bottom: -127px;
+    left: 179px;
   }
   .top__slider .swiper-slide .top__info-title img {
     height: 32px;
     width: 32px;
     border-radius: 0;
+  }
+  .top__slider .swiper-slide {
+    margin-right: 0;
   }
   .announcements__title {
     max-width: 380px;
@@ -1667,11 +1676,11 @@
   .offers__pagination {
     margin-right: 23px;
   }
-  .compitences__item {
+  .competencies__item {
     max-width: 467px;
     width: 100%;
   }
-  .compitences__item-box {
+  .competencies__item-box {
     justify-content: center;
   }
   .tests__item {
@@ -1823,7 +1832,9 @@
     font-size: 32px;
   }
   .top__slider-controls {
-    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 21px;
   }
   .offers__item {
     width: 100% !important;
@@ -2012,29 +2023,29 @@
   .offers {
     padding: 60px 0;
   }
-  .compitences__text {
+  .competencies__text {
     font-size: 15px;
     max-width: 300px;
   }
-  .compitences__item {
+  .competencies__item {
     max-width: 298px;
   }
-  .compitences__item-title {
+  .competencies__item-title {
     font-size: 20px;
     line-height: 100%;
     margin-bottom: 8px;
   }
-  .compitences__item-img {
+  .competencies__item-img {
     width: 64px;
     height: 64px;
   }
-  .compitences__item-box {
+  .competencies__item-box {
     margin-bottom: 20px;
   }
-  .compitences__item {
+  .competencies__item {
     padding: 20px 15px 20px 10px;
   }
-  .compitences__item-text {
+  .competencies__item-text {
     font-size: 13px;
     min-height: 55px;
   }
@@ -2061,7 +2072,7 @@
   .want__wrapper {
     max-width: 540px;
   }
-  .compitences__wrapper {
+  .competencies__wrapper {
     max-width: 630px;
   }
   .experience__text {
@@ -2415,10 +2426,10 @@
     }
   }
   .top__title {
-    max-width: 450px;
+    max-width: 460px;
   }
   .top__image {
-    padding-right: 80px;
+    padding-right: 62px;
   }
   .top__slider-img {
     min-height: 400px;
@@ -2975,10 +2986,10 @@
   .top__title {
     font-size: 30px;
     line-height: 110%;
-    max-width: 330px;
+    max-width: 345px;
   }
   .top__image {
-    padding-right: 59px;
+    padding-right: 45px;
   }
   .top__slider .swiper-slide img {
     object-position: right center;
@@ -3116,7 +3127,7 @@
     align-items: start;
   }
   .offers,
-  .compitences,
+  .competencies,
   .want,
   .experience,
   .tests,
@@ -3304,10 +3315,10 @@
   .announcements__notes-text {
     max-width: 230px;
   }
-  .compitences__text {
+  .competencies__text {
     max-width: 222px;
   }
-  .compitences__items-wrapper {
+  .competencies__items-wrapper {
     overflow-x: scroll;
     padding-bottom: 25px;
     &::-webkit-scrollbar {
@@ -3319,11 +3330,11 @@
       border-radius: 5px;
     }
   }
-  .compitences__items {
+  .competencies__items {
     flex-wrap: nowrap;
     width: 1265px;
   }
-  .compitences__inner {
+  .competencies__inner {
     gap: 25px;
   }
   .want__wrapper {
@@ -4025,7 +4036,7 @@
   }
   .map__box,
   .offers__box,
-  .compitences__wrapper,
+  .competencies__wrapper,
   .want__wrapper,
   .reviews__wrapper {
     flex-direction: column;
@@ -4033,7 +4044,7 @@
     justify-content: start;
   }
   .map__title,
-  .compitences__title,
+  .competencies__title,
   .reviews__title,
   .reviews__wrapper {
     margin-bottom: 15px;
@@ -4055,7 +4066,7 @@
     line-height: 135%;
     margin-bottom: 30px;
   }
-  .compitences__text {
+  .competencies__text {
     max-width: 300px;
   }
   .want__item {
@@ -4273,7 +4284,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .offers,
-  .compitences,
+  .competencies,
   .want,
   .experience,
   .tests,

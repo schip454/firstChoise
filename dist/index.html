@@ -8,7 +8,7 @@
     <title>First Choice</title>
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
+  <body class="loading">
     <header class="header">
       <div class="container">
         <div class="header__inner">
@@ -122,11 +122,11 @@
           <div class="top__inner">
             <div class="top__box">
                 <h1 class="top__title hidden  wow animate__fadeIn " data-wow-duration="1.3s">
-                  <div class="top__image">
-                    <img src="images/icon/star.svg" alt="Star Icon" />
-                  </div>
                   <p>
-                  We are urgent</p> <p>care <span>walk-in clinic</span></p>
+                    <div class="top__image">
+                      <img src="images/icon/star.svg" alt="Star Icon" />
+                    </div>
+                    We are urgent</p> <p>care <span>walk-in clinic</span></p>
                 </h1>
               <p class="top__text wow animate__fadeIn hidden" data-wow-offset="10"  data-wow-duration=".7s" data-wow-delay=".8s">
                 Always nearby and ready to help you in time whether you’re
@@ -135,7 +135,7 @@
             </div>
             <div class="top__slider wow animate__fadeIn hidden" data-wow-duration=".8s" data-wow-delay="1.2s">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper ">
+              <div class="swiper-wrapper top__slider-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide" >
                   <img class="top__slider-img" src="images/slides/1.webp" alt="Slider Image" />
@@ -147,75 +147,77 @@
                   <img class="top__slider-img" src="images/slides/3.webp" alt="Slider Image" />
                 </div>
               </div>
+           
               <div class="top__info top__info-slider">
-                <div class="top__info-wrapper swiper-wrapper">
-                  <!-- top__info-item -->
-                  <div class="swiper-slide top__info-item">
-                    <h3 class="top__info-title wow animate__fadeIn hidden" data-wow-duration="1s" >
-                      Find your clinic
-                      <img class="wow animate__fadeIn hidden" data-wow-duration="1.3s"  src="images/icon/map.svg" alt="Map Icon" />
-                    </h3>
-                    <p class="top__info-text top__info-text--limited  wow animate__fadeIn hidden"  data-wow-duration="1.4s">
-                      Find the nearest clinic at your home and get in line without
-                      leaving it
-                    </p>
-                    <div class="top__info-box  wow animate__fadeIn hidden"   data-wow-duration="1.6s" >
-                      <div class="top__info-button">
-                        <button class="btn top__info-btn">Find your clinic</button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /top__info-item -->
-                  <!-- top__info-item -->
-                  <div class="swiper-slide top__info-item animate__animated animate__fadeIn">
-                    <h3 class="top__info-title">
-                      Occupational health
-                      <img src="images/icon/worker.svg" alt="Worker Icon" />
-                    </h3>
-                    <p class="top__info-text">
-                      We provide occupational health services and work with employers of all sizes and from a variety of industries
-                    </p>
-                    <div class="top__info-box">
-                      <div class="top__info-button">
-                        <button class="btn top__info-btn">Learn more</button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /top__info-item -->
-                  <!-- top__info-item -->
-                  <div class="swiper-slide top__info-item animate__animated animate__fadeIn">
-                    <h3 class="top__info-title">
-                      Virtual visits
-                      <img src="images/icon/phone-ico.svg" alt="Phone Icon" />
-                    </h3>
-                    <p class="top__info-text">
-                      Meet with your doctor from the comfort of your home. Sign up for a virtual visit right now!
-                    </p>
-                    <div class="top__info-box">
-                      <div class="top__info-button">
-                        <button class="btn top__info-btn">Book a visit</button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /top__info-item -->
-                  <div class="top__slider-controls wow animate__fadeIn hidden"   data-wow-duration="1.8s" >
-                    <div class="top__slider-pagination"></div>
+               <div class="top__info-wrapper swiper-wrapper">
+                 <!-- top__info-item -->
+                 <div class="swiper-slide top__info-item">
+                   <h3 class="top__info-title wow animate__fadeIn hidden" data-wow-duration="1s" >
+                     Find your clinic
+                     <img class="wow animate__fadeIn hidden" data-wow-duration="1.3s"  src="images/icon/map.svg" alt="Map Icon" />
+                   </h3>
+                   <p class="top__info-text top__info-text--limited  wow animate__fadeIn hidden"  data-wow-duration="1.4s">
+                     Find the nearest clinic at your home and get in line without
+                     leaving it
+                   </p>
+                   <div class="top__info-box  wow animate__fadeIn hidden"   data-wow-duration="1.6s" >
+                     <div class="top__info-button">
+                       <button class="btn top__info-btn">Find your clinic</button>
+                     </div>
+                   </div>
+                 </div>
+                 <!-- /top__info-item -->
+                 <!-- top__info-item -->
+                 <div class="swiper-slide top__info-item"> 
+                   <h3 class="top__info-title wow animate__fadeIn hidden" data-wow-duration="1s">
+                     Occupational health
+                     <img src="images/icon/worker.svg" alt="Worker Icon" />
+                   </h3>
+                   <p class="top__info-text">
+                     We provide occupational health services and work with employers of all sizes and from a variety of industries
+                   </p>
+                   <div class="top__info-box wow animate__fadeIn hidden"   data-wow-duration="1.6s">
+                     <div class="top__info-button">
+                       <button class="btn top__info-btn">Learn more</button>
+                     </div>
+                   </div>
+                 </div>
+                 <!-- /top__info-item -->
+                 <!-- top__info-item -->
+                 <div class="swiper-slide top__info-item">
+                   <h3 class="top__info-title wow animate__fadeIn hidden" data-wow-duration="1s">
+                     Virtual visits
+                     <img src="images/icon/phone-ico.svg" alt="Phone Icon" />
+                   </h3>
+                   <p class="top__info-text">
+                     Meet with your doctor from the comfort of your home. Sign up for a virtual visit right now!
+                   </p>
+                   <div class="top__info-box wow animate__fadeIn hidden"   data-wow-duration="1.6s">
+                     <div class="top__info-button">
+                       <button class="btn top__info-btn">Book a visit</button>
+                     </div>
+                   </div>
+                 </div>
+                 <!-- /top__info-item -->
+       
+               </div>
+             </div>
+             <div class="top__slider-controls ">
+              <div class="top__slider-pagination"></div>
 
-                    <div class="top__slider-buttons">
-                      <div class="top__slider-prev">
-                        <img
-                          src="images/slides/left-arr.svg"
-                          alt="Left Arrow" />
-                      </div>
-                      <div class="top__slider-next">
-                        <img
-                          src="images/slides/right-aarr.svg"
-                          alt="Right Arrow" />
-                      </div>
-                    </div>
-                  </div>
+              <div class="top__slider-buttons">
+                <div class="top__slider-prev">
+                  <img
+                    src="images/slides/left-arr.svg"
+                    alt="Left Arrow" />
+                </div>
+                <div class="top__slider-next">
+                  <img
+                    src="images/slides/right-aarr.svg"
+                    alt="Right Arrow" />
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -781,56 +783,56 @@
         </div>
       </section>
 
-      <section class="compitences">
+      <section class="competencies">
         <div class="container">
-          <div class="compitences__inner">
-            <div class="compitences__items-wrapper">
-              <div class="compitences__items">
-                <a href="#" class="compitences__item wow animate__slideInLeft" data-wow-duration=".8s" >
-                  <div class="compitences__item-box">
-                    <img src="images/slides/compitences-1.svg" alt="Urgent care" class="compitences__item-img">
-                    <div class="compitences__item-titlebox">
-                      <h5 class="compitences__item-title">Urgent care</h5>
-                      <p class="compitences__item-text">We treat a variety of illnesses and injuries</p>
+          <div class="competencies__inner">
+            <div class="competencies__items-wrapper">
+              <div class="competencies__items">
+                <a href="#" class="competencies__item wow animate__slideInLeft" data-wow-duration=".8s" >
+                  <div class="competencies__item-box">
+                    <img src="images/slides/compitences-1.svg" alt="Urgent care" class="competencies__item-img">
+                    <div class="competencies__item-titlebox">
+                      <h5 class="competencies__item-title">Urgent care</h5>
+                      <p class="competencies__item-text">We treat a variety of illnesses and injuries</p>
                     </div>
                   </div>
-                  <button class="compitences__item-btn transparent-btn">Book a visit</button>
+                  <button class="competencies__item-btn transparent-btn">Book a visit</button>
                 </a>
-                <a href="#" class="compitences__item wow animate__slideInLeft" data-wow-duration=".8s"  >
-                  <div class="compitences__item-box">
-                    <img src="images/slides/compitences-2.svg" alt="Occupational health" class="compitences__item-img">
-                    <div class="compitences__item-titlebox">
-                      <h5 class="compitences__item-title">Occupational health</h5>
-                      <p class="compitences__item-text">We welcome the opportunity to become your healthcare partner</p>
+                <a href="#" class="competencies__item wow animate__slideInLeft" data-wow-duration=".8s"  >
+                  <div class="competencies__item-box">
+                    <img src="images/slides/compitences-2.svg" alt="Occupational health" class="competencies__item-img">
+                    <div class="competencies__item-titlebox">
+                      <h5 class="competencies__item-title">Occupational health</h5>
+                      <p class="competencies__item-text">We welcome the opportunity to become your healthcare partner</p>
                     </div>
                   </div>
-                  <button class="compitences__item-btn transparent-btn">Learn more</button>
+                  <button class="competencies__item-btn transparent-btn">Learn more</button>
                 </a>
-                <a href="#" class="compitences__item wow animate__slideInLeft" data-wow-duration=".8s">
-                  <div class="compitences__item-box">
-                    <img src="images/slides/compitences-3.svg" alt="Diagnostic exams" class="compitences__item-img">
-                    <div class="compitences__item-titlebox">
-                      <h5 class="compitences__item-title">Diagnostic exams</h5>
-                      <p class="compitences__item-text">We have a full service lab for blood tests, EKGs and X-rays</p>
+                <a href="#" class="competencies__item wow animate__slideInLeft" data-wow-duration=".8s">
+                  <div class="competencies__item-box">
+                    <img src="images/slides/compitences-3.svg" alt="Diagnostic exams" class="competencies__item-img">
+                    <div class="competencies__item-titlebox">
+                      <h5 class="competencies__item-title">Diagnostic exams</h5>
+                      <p class="competencies__item-text">We have a full service lab for blood tests, EKGs and X-rays</p>
                     </div>
                   </div>
-                  <button class="compitences__item-btn transparent-btn">Book a visit</button>
+                  <button class="competencies__item-btn transparent-btn">Book a visit</button>
                 </a>
-                <a href="#" class="compitences__item wow animate__slideInLeft" data-wow-duration=".8s"  >
-                  <div class="compitences__item-box">
-                    <img src="images/slides/compitences-4.svg" alt="Weight loss" class="compitences__item-img">
-                    <div class="compitences__item-titlebox">
-                      <h5 class="compitences__item-title">Weight loss</h5>
-                      <p class="compitences__item-text">We provides safe and effective weight loss plan</p>
+                <a href="#" class="competencies__item wow animate__slideInLeft" data-wow-duration=".8s"  >
+                  <div class="competencies__item-box">
+                    <img src="images/slides/compitences-4.svg" alt="Weight loss" class="competencies__item-img">
+                    <div class="competencies__item-titlebox">
+                      <h5 class="competencies__item-title">Weight loss</h5>
+                      <p class="competencies__item-text">We provides safe and effective weight loss plan</p>
                     </div>
                   </div>
-                  <button class="compitences__item-btn transparent-btn">Learn more</button>
+                  <button class="competencies__item-btn transparent-btn">Learn more</button>
                 </a>
               </div>
             </div>
-            <div class="compitences__wrapper">
-              <h2 class="compitences__title section-title   " data-wow-duration=".7s" data-wow-offset="200">Our <span>services</span></h2>
-              <p class="compitences__text wow hidden animate__fadeIn" data-wow-duration=".6s" data-wow-delay=".3s">We provide urgent care and occupational health services, diagnostic exams and weight loss course</p>
+            <div class="competencies__wrapper">
+              <h2 class="competencies__title section-title   " data-wow-duration=".7s" data-wow-offset="200">Our competencies</h2>
+              <p class="competencies__text wow hidden animate__fadeIn" data-wow-duration=".6s" data-wow-delay=".3s">We provide urgent care and occupational health services, diagnostic exams and weight loss course</p>
             </div>
           </div>
         </div>
@@ -1386,7 +1388,7 @@ gsap.to(".top__title .word", {
       titleAnimationFunc(".announcements__title");
       titleAnimationFunc(".map__title");
       titleAnimationFunc(".offers__title");
-      titleAnimationFunc(".compitences__title");
+      titleAnimationFunc(".competencies__title");
       titleAnimationFunc(".want__title");
       titleAnimationFunc(".visit__title");
       titleAnimationFunc(".tests__title");
@@ -1396,7 +1398,7 @@ gsap.to(".top__title .word", {
     intersectionObserver.observe(document.querySelector(".announcements__title"));
     intersectionObserver.observe(document.querySelector(".map__title"));
     intersectionObserver.observe(document.querySelector(".offers__title"));
-    intersectionObserver.observe(document.querySelector(".compitences__title"));
+    intersectionObserver.observe(document.querySelector(".competencies__title"));
     intersectionObserver.observe(document.querySelector(".want__title"));
     intersectionObserver.observe(document.querySelector(".visit__title"));
     intersectionObserver.observe(document.querySelector(".tests__title"));
