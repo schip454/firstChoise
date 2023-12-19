@@ -150,6 +150,7 @@ const swiperFour = new Swiper(".reviews__slider", {
   breakpoints: {
     320: {
       pagination: {
+        clickable: true,
         el: ".reviews__slider-pagination",
         type: "bullets",
       },
