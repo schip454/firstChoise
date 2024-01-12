@@ -132,16 +132,7 @@ const swiperFour = new Swiper(".reviews__slider", {
   // Optional parameters
   loop: true,
   spaceBetween: 30,
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      opacity: 0,
-    },
-    next: {
-      opacity: 0,
-    },
-  },
-
+  speed: 500,
   // Navigation arrows
   navigation: {
     nextEl: ".reviews__slider-next",
